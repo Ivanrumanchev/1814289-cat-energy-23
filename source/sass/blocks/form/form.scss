@@ -19,3 +19,26 @@
   line-height: 16px;
   color: #000000;
 }
+
+.form__contacts-person,
+.form__comment,
+.form__add {
+  margin: 0;
+  padding: 0;
+  border-top: 2px solid #68b738;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+}
+
+.form__contacts-person {
+  padding-top: 35px;
+}
+
+.form__comment {
+  padding-top: 37px;
+}
+
+.form__add {
+  padding-top: 39px;
+}
