@@ -2,7 +2,9 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -61,18 +63,18 @@
             <label for="unknown" class="radio__label label">Не знаю (нужен ваш совет)</label>
           </div>
           <fieldset class="form__contacts-person contacts-person">
-            <legend class="contacts-person__legend">Контактные данные (владельца кота)</legend>
+            <legend class="form__legend">Контактные данные (владельца кота)</legend>
             <label class="contacts-person__label label" for="mail">E-MAIL:*</label>
             <input class="contacts-person__input input-text" type="email" name="mail" id="mail" placeholder="KUKLACHEV@GMAIL.COM" required>
             <label class="contacts-person__label label" for="phone">Телефон:*</label>
             <input class="contacts-person__input input-text" type="tel" name="phone" id="phone" pattern="\8\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="8 (960) 900-60-90" required>
           </fieldset>
           <fieldset class="form__comment comment">
-            <legend class="comment__legend">Комментарий:</legend>
+            <legend class="form__legend">Комментарий:</legend>
             <textarea class="comment__textarea" name="comment" id="comment" rows="5">Расскажите обо всех повадках кота</textarea>
           </fieldset>
           <fieldset class="form__add add">
-            <legend class="add__legend">Дополнительно:</legend>
+            <legend class="form__legend">Дополнительно:</legend>
             <input class="add__input input-checkbox" type="checkbox" name="nosugar" id="nosugar" checked>
             <label for="nosugar" class="add__label label">Сахарозаменитель</label>
             <input class="add__input input-checkbox" type="checkbox" name="water" id="water">
