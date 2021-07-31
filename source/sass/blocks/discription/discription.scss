@@ -33,21 +33,25 @@
 
   &--health {
     margin-bottom: 26px;
-    background: url("../../../img/bg_descriptoin__item--health.svg") no-repeat;
+    background: url("../img/bg_descriptoin__item--health.svg") no-repeat;
+    background-size: 60px 60px;
   }
 
   &--fast {
     margin-bottom: 26px;
-    background: url("../../../img/bg_descriptoin__item--fast.svg") no-repeat;
+    background: url("../img/bg_descriptoin__item--fast.svg") no-repeat;
+    background-size: 60px 60px;
   }
 
   &--change {
     margin-bottom: 26px;
-    background: url("../../../img/bg_descriptoin__item--change.svg") no-repeat;
+    background: url("../img/bg_descriptoin__item--change.svg") no-repeat;
+    background-size: 60px 60px;
   }
 
   &--result {
-    background: url("../../../img/bg_descriptoin__item--result.svg") no-repeat;
+    background: url("../img/bg_descriptoin__item--result.svg") no-repeat;
+    background-size: 60px 60px;
   }
 }
 

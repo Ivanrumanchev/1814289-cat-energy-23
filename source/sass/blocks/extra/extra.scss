@@ -21,7 +21,8 @@
 .extra__gift {
   width: 280px;
   height: 289px;
-  background: #68b738 url("../../../img/bg_extra__gift.png") no-repeat;
+  background: #68b738 url("../img/bg_extra__gift.png") no-repeat;
+  background-size: 280px 289px;
   position: relative;
 
   font-family: "Arial", sans-serif;
@@ -37,6 +38,7 @@
     left: 101px;
     width: 78px;
     height: 80px;
-    background: url("../../../img/bg_icon_gift.svg") no-repeat;
+    background: url("../img/bg_icon_gift.svg") no-repeat;
+    background-size: 78px 80px;
   }
 }

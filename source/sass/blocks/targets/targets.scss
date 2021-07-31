@@ -21,11 +21,13 @@ $padding: 18px;
 
   &--slim {
     margin-bottom: 20px;
-    background: #f2f2f2 url("../../../img/bg_cat-slim.png") no-repeat 22px 21px;
+    background: #f2f2f2 url("../img/bg_cat-slim.png") no-repeat 22px 21px;
+    background-size: 50px 53px;
   }
 
   &--fat {
     background: #f2f2f2 url("../../../img/bg_cat-fat.png") no-repeat 13px 24px;
+    background-size: 67px 50px;
   }
 }
 
@@ -72,6 +74,7 @@ $padding: 18px;
     height: 10px;
     left: 100px;
     top: 7px;
-    background: url("../../../img/arrow.svg") no-repeat;
+    background: url("../img/arrow.svg") no-repeat;
+    background-size: 24px 12px;
   }
 }
