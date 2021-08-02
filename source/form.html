@@ -2,7 +2,9 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -40,46 +42,46 @@
       </div>
       <form class="form" action="https://echo.htmlacademy.ru/courses" method="POST">
         <div class="form__wrapper">
-          <div class="form__features features">
-            <label class="features__label label" for="name">Имя:*</label>
-            <input class="features__input input-text" type="text" name="name" id="name" placeholder="БАРСИК" autofocus required>
+          <div class="form__features">
+            <label class="label" for="name">Имя:*</label>
+            <input class="input-text" type="text" name="name" id="name" placeholder="БАРСИК" autofocus required>
             <br>
-            <label class="features__label label" for="weight">Вес:*</label>
-            <input class="features__input input-text" type="text" name="weight" id="weight" placeholder="7" required>
+            <label class="label" for="weight">Вес:*</label>
+            <input class="input-text" type="text" name="weight" id="weight" placeholder="7" required>
             <br>
-            <label class="features__label label" for="age">Возраст:</label>
-            <input class="features__input input-text" type="text" name="age" id="age" placeholder="7">
+            <label class="label" for="age">Возраст:</label>
+            <input class="input-text" type="text" name="age" id="age" placeholder="7">
           </div>
           <div class="form__radio radio">
-            <input class="radio__input input-radio" type="radio" name="radio" value="slim" id="slim" checked>
+            <input class="radio__input" type="radio" name="radio" value="slim" id="slim" checked>
             <label for="slim" class="radio__label label">Похудение</label>
             <br>
-            <input class="radio__input input-radio" type="radio" name="radio" value="fat" id="fat">
+            <input class="radio__input" type="radio" name="radio" value="fat" id="fat">
             <label for="fat" class="radio__label label">Набор массы</label>
             <br>
-            <input class="radio__input input-radio" type="radio" name="radio" value="unknown" id="unknown">
+            <input class="radio__input" type="radio" name="radio" value="unknown" id="unknown">
             <label for="unknown" class="radio__label label">Не знаю (нужен ваш совет)</label>
           </div>
-          <fieldset class="form__contacts-person contacts-person">
-            <legend class="contacts-person__legend">Контактные данные (владельца кота)</legend>
-            <label class="contacts-person__label label" for="mail">E-MAIL:*</label>
-            <input class="contacts-person__input input-text" type="email" name="mail" id="mail" placeholder="KUKLACHEV@GMAIL.COM" required>
-            <label class="contacts-person__label label" for="phone">Телефон:*</label>
-            <input class="contacts-person__input input-text" type="tel" name="phone" id="phone" pattern="\8\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="8 (960) 900-60-90" required>
+          <fieldset class="form__contacts-person">
+            <legend class="form__legend">Контактные данные (владельца кота)</legend>
+            <label class="label" for="mail">E-MAIL:*</label>
+            <input class="input-text" type="email" name="mail" id="mail" placeholder="KUKLACHEV@GMAIL.COM" required>
+            <label class="label" for="phone">Телефон:*</label>
+            <input class="input-text" type="tel" name="phone" id="phone" pattern="\8\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="8 (960) 900-60-90" required>
           </fieldset>
           <fieldset class="form__comment comment">
-            <legend class="comment__legend">Комментарий:</legend>
+            <legend class="form__legend">Комментарий:</legend>
             <textarea class="comment__textarea" name="comment" id="comment" rows="5">Расскажите обо всех повадках кота</textarea>
           </fieldset>
           <fieldset class="form__add add">
-            <legend class="add__legend">Дополнительно:</legend>
-            <input class="add__input input-checkbox" type="checkbox" name="nosugar" id="nosugar" checked>
+            <legend class="form__legend">Дополнительно:</legend>
+            <input class="add__input input-checkbox visually-hidden" type="checkbox" name="nosugar" id="nosugar" checked>
             <label for="nosugar" class="add__label label">Сахарозаменитель</label>
-            <input class="add__input input-checkbox" type="checkbox" name="water" id="water">
+            <input class="add__input input-checkbox visually-hidden" type="checkbox" name="water" id="water">
             <label for="water" class="add__label label">Питьевая вода</label>
-            <input class="add__input input-checkbox" type="checkbox" name="milk" id="milk">
+            <input class="add__input input-checkbox visually-hidden" type="checkbox" name="milk" id="milk">
             <label for="milk" class="add__label label">Молоко</label>
-            <input class="add__input input-checkbox" type="checkbox" name="vitamins" id="vitamins">
+            <input class="add__input input-checkbox visually-hidden" type="checkbox" name="vitamins" id="vitamins">
             <label for="vitamins" class="add__label label">Витамины</label>
           </fieldset>
             <input class="form__submit button" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ">

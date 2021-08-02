@@ -1,0 +1,14 @@
+.contacts__title {
+  font-size: 16 * $font-size;
+  font-weight: 400;
+  line-height: 20 * $line-height;
+  text-transform: uppercase;
+}
+
+.contacts__text {
+  font-family: $text_font;
+  font-weight: 400;
+  font-size: 14 * $font-size;
+  line-height: 20 * $line-height;
+  color: $special_1_color;
+}

@@ -1,0 +1,23 @@
+.preview__wrapper {
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.preview__title {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 36 * $font-size;
+  line-height: 36 * $line-height;
+  font-weight: 400;
+}
+
+.preview__slogan {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14 * $font-size;
+  line-height: 14 * $line-height;
+  text-transform: uppercase;
+}
