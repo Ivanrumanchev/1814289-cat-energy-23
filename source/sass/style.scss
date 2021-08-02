@@ -2,37 +2,38 @@
 @import "global/normalize";
 @import "global/visually-hidden.scss";
 @import "global/fonts.scss";
+@import "global/color.scss";
 
 // Blocks common
-@import "blocks/button/button.scss";
-@import "blocks/page/page.scss";
-@import "blocks/page-header/page-header.scss";
-@import "blocks/main-nav/main-nav.scss";
-@import "blocks/page-main/page-main.scss";
-@import "blocks/location/location.scss";
-@import "blocks/contacts/contacts.scss";
-@import "blocks/page-footer/page-footer.scss";
-@import "blocks/social/social.scss";
-@import "blocks/copyright/copyright.scss";
+@import "blocks/button.scss";
+@import "blocks/page.scss";
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/page-main.scss";
+@import "blocks/location.scss";
+@import "blocks/contacts.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/social.scss";
+@import "blocks/copyright.scss";
 
 //index.html
-@import "blocks/preview/preview.scss";
-@import "blocks/targets/targets.scss";
-@import "blocks/discription/discription.scss";
-@import "blocks/example/example.scss";
-@import "blocks/result/result.scss";
-@import "blocks/slider/slider.scss";
+@import "blocks/preview.scss";
+@import "blocks/targets.scss";
+@import "blocks/description.scss";
+@import "blocks/example.scss";
+@import "blocks/result.scss";
+@import "blocks/slider.scss";
 
 //catalog.html
-@import "blocks/catalog/catalog.scss";
-@import "blocks/catalog-item/catalog-item.scss";
-@import "blocks/extra/extra.scss";
-@import "blocks/extra-item/extra-item.scss";
+@import "blocks/catalog.scss";
+@import "blocks/catalog-item.scss";
+@import "blocks/extra.scss";
+@import "blocks/extra-item.scss";
 
 //form.html
-@import "blocks/form/form.scss";
-@import "blocks/label/label.scss";
-@import "blocks/input-text/input-text.scss";
-@import "blocks/radio/radio.scss";
-@import "blocks/comment/comment.scss";
-@import "blocks/add/add.scss";
+@import "blocks/form.scss";
+@import "blocks/label.scss";
+@import "blocks/input-text.scss";
+@import "blocks/radio.scss";
+@import "blocks/comment.scss";
+@import "blocks/add.scss";

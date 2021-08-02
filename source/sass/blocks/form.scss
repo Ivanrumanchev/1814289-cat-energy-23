@@ -1,0 +1,44 @@
+.form__wrapper {
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.form__legend {
+  font-size: 24 * $font-size;
+  line-height: 26 * $line-height;
+}
+
+.form__required {
+  text-align: center;
+
+  font-family: $text_font;
+  font-size: 14 * $font-size;
+  line-height: 16 * $line-height;
+  color: $basic_color;
+}
+
+.form__contacts-person,
+.form__comment,
+.form__add {
+  margin: 0;
+  padding: 0;
+  border-top: 2px solid $background;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+}
+
+.form__contacts-person {
+  padding-top: 35px;
+}
+
+.form__comment {
+  padding-top: 37px;
+}
+
+.form__add {
+  padding-top: 39px;
+}
