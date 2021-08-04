@@ -36,10 +36,9 @@ $padding: 18px;
   margin-top: 12px;
   margin-left: 91px - $padding;
 
-  font-size: 24 * $font-size;
-  font-weight: 400;
-  line-height: 37 * $line-height;
   text-transform: uppercase;
+
+  @include font ($title-size, ceil(1.54 * $title-size));
 }
 
 .targets__description {
@@ -49,10 +48,9 @@ $padding: 18px;
   margin-right: 33px - $padding;
   margin-bottom: 42px;
 
-  font-family: $text_font;
-  font-weight: 400;
-  line-height: 18 * $line-height;
   color: $special_1_color;
+
+  @include font ($main-size, ceil(1.28 * $main-size), 400, $text_font);
 }
 
 .targets__to-catalog {
@@ -61,20 +59,20 @@ $padding: 18px;
 
   text-transform: uppercase;
   text-decoration: none;
-  font-family: $basic_font;
-  font-weight: 400;
-  font-size: 16 * $font-size;
-  line-height: 16 * $line-height;
+
   color: $basic_color;
+
+  @include font ($secondary-main-size);
 
   &::after {
     content: "";
     position: absolute;
-    width: 32px;
-    height: 10px;
     left: 100px;
     top: 7px;
+
     background: url("../img/arrow.svg") no-repeat;
     background-size: 24px 12px;
+
+    @include size (32px, 10px);
   }
 }

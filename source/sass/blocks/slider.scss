@@ -1,1 +1,5 @@
-//slider
+.slider__toggle {
+  text-transform: uppercase;
+
+  @include font ($secondary-main-size, ceil(1.25 * $secondary-main-size));
+}

@@ -7,17 +7,15 @@
 }
 
 .form__legend {
-  font-size: 24 * $font-size;
-  line-height: 26 * $line-height;
+  @include font ($title-size, ceil(1.08 * $title-size));
 }
 
 .form__required {
   text-align: center;
 
-  font-family: $text_font;
-  font-size: 14 * $font-size;
-  line-height: 16 * $line-height;
   color: $basic_color;
+
+  @include font ($main-size, ceil(1.14 * $main-size), 400, $text_font);
 }
 
 .form__contacts-person,

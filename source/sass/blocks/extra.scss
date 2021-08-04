@@ -7,9 +7,7 @@
 }
 
 .extra__title {
-  font-size: 24 * $font-size;
-  line-height: 24 * $line-height;
-  font-weight: 400;
+  @include font ($title-size);
 }
 
 .extra__list {
@@ -19,26 +17,24 @@
 }
 
 .extra__gift {
-  width: 280px;
-  height: 289px;
   background: $background url("../img/bg_extra__gift.png") no-repeat;
   background-size: 280px 289px;
   position: relative;
 
-  font-family: $text_font;
-  font-weight: 400;
-  font-size: 16 * $font-size;
-  line-height: 20 * $line-height;
   color: $background_special_2;
+
+  @include size (280px, 289px);
+  @include font ($secondary-main-size, ceil(1.25 * $secondary-main-size), 400, $text_font);
 
   &::after {
     content: "";
     position: absolute;
     top: 58px;
     left: 101px;
-    width: 78px;
-    height: 80px;
+
     background: url("../img/bg_icon_gift.svg") no-repeat;
     background-size: 78px 80px;
+
+    @include size (78px, 80px);
   }
 }

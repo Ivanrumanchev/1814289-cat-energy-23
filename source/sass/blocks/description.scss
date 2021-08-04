@@ -11,9 +11,7 @@
 .description__title {
   margin: 0;
 
-  font-size: 36 * $font-size;
-  line-height: 40 * $line-height;
-  font-weight: 400;
+  @include font ($secondary-title-size, ceil(1.11 * $secondary-title-size));
 }
 
 .description__list {
@@ -26,11 +24,11 @@
 .description__item {
   padding-left: 80px;
 
-  font-family: $text_font;
-  font-weight: 400;
-  line-height: 18 * $line-height;
   color: $special_1_color;
+
   background-size: 60px 60px;
+
+  @include font ($main-size, ceil(1.28 * $main-size), 400, $text_font);
 
   &--health {
     margin-bottom: 26px;

@@ -10,13 +10,11 @@
 }
 
 .page-main__title {
-  font-size: 36 * $font-size;
-  font-weight: 400;
-  line-height: 36 * $line-height;
+  @include font ($secondary-title-size);
 }
 
 .page-main__lead {
-  font-size: 14 * $font-size;
-  line-height: 18 * $line-height;
   text-transform: uppercase;
+
+  @include font ($main-size, ceil(1.28 * $main-size));
 }

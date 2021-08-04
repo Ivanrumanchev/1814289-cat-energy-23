@@ -11,9 +11,9 @@
     box-sizing: border-box;
     left: 0%;
     top: -5px;
-    width: 30px;
-    height: 30px;
     border: 1px solid $checkbox_color;
+
+    @include size (30px);
   }
 }
 

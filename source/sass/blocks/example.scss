@@ -15,22 +15,20 @@
 .example__title {
   margin: 0;
 
-  font-size: 36 * $font-size;
-  line-height: 40 * $line-height;
-  font-weight: 400;
+  @include font ($secondary-title-size, ceil(1.11 * $secondary-title-size));
 }
 
 .example__content {
-  font-family: $text_font;
-  font-weight: 400;
-  line-height: 18 * $line-height;
   color: $special_1_color;
+
+  @include font ($main-size, ceil(1.28 * $main-size), 400, $text_font);
 }
 
 .example__cost {
   text-align: center;
-  line-height: 20 * $line-height;
   text-transform: uppercase;
+
+  @include font ($main-size, ceil(1.42 * $main-size));
 }
 
 .example__list-numbers,
@@ -42,10 +40,4 @@
 
 .example__toggles {
   margin: 0;
-}
-
-.slider__toggle {
-  font-size: 16 * $font-size;
-  line-height: 20 * $line-height;
-  text-transform: uppercase;
 }

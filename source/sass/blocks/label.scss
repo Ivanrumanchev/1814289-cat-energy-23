@@ -1,6 +1,6 @@
 .label {
-  font-size: 14 * $font-size;
-  line-height: 18 * $line-height;
   text-transform: uppercase;
   color: $special_1_color;
+
+  @include font ($secondary-main-size, ceil(1.12 * $secondary-main-size));
 }

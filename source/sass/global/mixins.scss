@@ -1,0 +1,11 @@
+@mixin size ($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font ($font-size, $line-height: $font-size, $font-weight: inherit, $font-family: inherit) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  font-family: $font-family;
+}

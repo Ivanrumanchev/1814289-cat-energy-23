@@ -1,15 +1,13 @@
 .extra-item__name {
-  font-size: 16 * $font-size;
-  line-height: 16 * $line-height;
   text-transform: uppercase;
   color: $special_2_color;
+
+  @include font ($secondary-main-size);
 }
 
 .extra-item__weight,
 .extra-item__cost {
-  font-family: $text_font;
-  font-weight: 400;
-  font-size: 14 * $font-size;
-  line-height: 14 * $line-height;
   color: $special_1_color;
+
+  @include font ($main-size, $main-size, 400, $text_font);
 }
