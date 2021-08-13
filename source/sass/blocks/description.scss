@@ -1,55 +1,191 @@
+.description {
+  position: relative;
+}
+
 .description__wrapper {
   margin: 0 auto;
   box-sizing: border-box;
-  width: 320px;
+  min-width: 280px;
+  width: 87.5%;
   padding-top: 27px;
-  padding-bottom: 46px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 708px;
+    width: 92.2%;
+    padding-top: 45px;
+    padding-bottom: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+      background-color: $example_border_color;
+
+      @include size (100%, 1px);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+
+    &::after {
+      content: none;
+    }
+  }
 }
 
 .description__title {
   margin: 0;
 
   @include font ($secondary-title-size, ceil(1.11 * $secondary-title-size));
+
+  @media (min-width: $tablet-width) {
+    @include font ($big-title-size);
+  }
 }
 
 .description__list {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   margin: 0;
-  margin-top: 40px;
+  margin-top: 38px;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 32px;
+  }
 }
 
 .description__item {
+  position: relative;
   padding-left: 80px;
+  min-height: 60px;
 
   color: $special_1_color;
 
-  background-size: 60px 60px;
-
   @include font ($main-size, ceil(1.28 * $main-size), 400, $text_font);
 
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+    width: 249px;
+    height: 280px;
+    padding-right: 74px;
+
+    @include font ($secondary-main-size, ceil(1.5 * $main-size), 400, $text_font);
+
+    &:nth-of-type(2n + 1) {
+      margin-bottom: 37px;
+    }
+
+    &:last-child {
+      margin-bottom: 47px;
+    }
+
+    &::after {
+      content: "1";
+      position: absolute;
+      top: 0%;
+      left: 118px;
+      color: $background_special;
+
+      @include font (280px, 280px, 400, $basic_font);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:nth-of-type(4n) {
+      padding-right: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 69px;
+    }
+  }
+
   &--health {
-    margin-bottom: 26px;
     background: url("../img/bg_description__item--health.svg") no-repeat;
+
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 26px;
+      background-size: 60px 60px;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-position-y: 40px;
+      background-size: 80px 80px;
+    }
   }
 
   &--fast {
-    margin-bottom: 26px;
     background: url("../img/bg_description__item--fast.svg") no-repeat;
+
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 26px;
+      background-size: 60px 60px;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-position-y: 40px;
+      background-size: 80px 80px;
+
+      &::after {
+        content: "2";
+        left: 111px;
+      }
+    }
   }
 
   &--change {
-    margin-bottom: 26px;
     background: url("../img/bg_description__item--change.svg") no-repeat;
+
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 26px;
+      background-size: 60px 60px;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-position-y: 40px;
+      background-size: 80px 80px;
+
+      &::after {
+        content: "3";
+        left: 113px;
+      }
+    }
   }
 
   &--result {
     background: url("../img/bg_description__item--result.svg") no-repeat;
+
+    @media (max-width: $mobile-width-only) {
+      background-size: 60px 60px;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-position-y: 40px;
+      background-size: 80px 80px;
+
+      &::after {
+        content: "4";
+        left: 113px;
+      }
+    }
   }
 }
 
 .description__text {
+  position: relative;
+  z-index: 2;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 151px;
+    width: 245px;
+  }
 }

@@ -1,5 +1,27 @@
 .slider__toggle {
   text-transform: uppercase;
+  padding-bottom: 0;
 
   @include font ($secondary-main-size, ceil(1.25 * $secondary-main-size));
+
+  border: none;
+  background-color: inherit;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 2px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
+
+    @include font ($main-header-size, ceil(1.5 * $main-header-size));
+  }
+}
+
+.slider__item {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    img {
+      @include size (708px, 553px);
+    }
+  }
 }

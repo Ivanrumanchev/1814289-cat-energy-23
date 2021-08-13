@@ -1,5 +1,7 @@
 .button {
-  display: table-cell;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   vertical-align: middle;
   text-align: center;
