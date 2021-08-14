@@ -78,6 +78,7 @@
 .location__map {
   position: relative;
   margin: 0 auto;
+  overflow-x: hidden;
 
   & iframe {
     width: 100%;

@@ -1,6 +1,11 @@
 .label {
+  margin-right: 10px;
   text-transform: uppercase;
   color: $special_1_color;
 
   @include font ($secondary-main-size, ceil(1.12 * $secondary-main-size));
+
+  @media (min-width: $tablet-width) {
+    @include font ($title-size-smaller, ceil(1.5 * $title-size-smaller));
+  }
 }

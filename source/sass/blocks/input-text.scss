@@ -1,5 +1,5 @@
 .input-text {
-  width: 100%;
+  flex-grow: 1;
   padding-top: 13.2px;
   padding-bottom: 13.8px;
   padding-left: 15px;
@@ -8,5 +8,11 @@
   text-transform: uppercase;
   color: $special_1_color;
 
+  border: 1px solid $form-border-color;
+
   @include font ($secondary-main-size, ceil(1.12 * $secondary-main-size));
+
+  @media (min-width: $tablet-width) {
+    @include font ($title-size-smaller, ceil(1.5 * $title-size-smaller));
+  }
 }

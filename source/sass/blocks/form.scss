@@ -1,9 +1,66 @@
-.form__wrapper {
+.form__wrapper,
+.form__submit,
+.form__required {
   margin: 0 auto;
   box-sizing: border-box;
-  width: 320px;
-  padding-left: 20px;
-  padding-right: 20px;
+  min-width: 280px;
+  width: 87.5%;
+
+  @media (min-width: $tablet-width) {
+    min-width: 628px;
+    width: 81.7%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+  }
+}
+
+.form__features {
+  position: relative;
+  padding-bottom: (24px - 14);
+
+  &::after {
+    @media (max-width: $mobile-width-only) {
+      content: "";
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+      background-color: $target_border_color;
+
+      @include size (100%, 1px);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: (72px - 20);
+  }
+}
+
+.form__row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.form__radio {
+  position: relative;
+
+  &::after {
+    @media (max-width: $mobile-width-only) {
+      content: "";
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+      background-color: $target_border_color;
+
+      @include size (100%, 1px);
+    }
+  }
 }
 
 .form__legend {
@@ -16,17 +73,6 @@
   color: $basic_color;
 
   @include font ($main-size, ceil(1.14 * $main-size), 400, $text_font);
-}
-
-.form__contacts-person,
-.form__comment,
-.form__add {
-  margin: 0;
-  padding: 0;
-  border-top: 2px solid $background;
-  border-left: none;
-  border-bottom: none;
-  border-right: none;
 }
 
 .form__contacts-person {
