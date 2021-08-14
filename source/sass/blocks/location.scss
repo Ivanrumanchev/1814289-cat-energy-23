@@ -1,21 +1,90 @@
-.location__wrapper {
-  margin: 0 auto;
-  box-sizing: border-box;
-  width: 320px;
+.location {
+  position: relative;
 }
 
-.location__contacts {
-  padding-left: 20px;
-  padding-right: 19px;
+.location__wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  min-width: 280px;
+  width: 87.5%;
+  display: flex;
+  justify-content: space-between;
   padding-top: 28px;
   padding-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 626px;
+    width: 81.5%;
+    padding-top: 62px;
+    padding-bottom: 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    z-index: 2;
+    left: 110px;
+    top: 95px;
+    padding-left: 76px;
+    padding-right: 89px;
+
+    width: 570px;
+    min-height: 201px;
+
+    background-color: $main_theme_color;
+  }
 }
 
-.contacts__text {
+.location__title {
+  width: 139px;
+  text-align: left;
+
+  text-transform: uppercase;
+
+  @include font ($secondary-main-size, ceil(1.12 * $secondary-main-size));
+
+  @media (min-width: $tablet-width) {
+    width: 171px;
+    margin-top: 4px;
+
+    @include font ($title-size-smaller);
+  }
+}
+
+.location__text {
   margin: 0;
+  width: 140px;
+  text-align: left;
+
+  color: $special_1_color;
+
+  @include font ($main-size, ceil(1.42 * $main-size), 400, $text_font);
+
+  @media (min-width: $tablet-width) {
+    width: 159px;
+    margin-bottom: 7px;
+    text-align: right;
+
+    @include font ($secondary-main-size, ceil(1.25 * $secondary-main-size), 400, $text_font);
+  }
+}
+
+.location__sity {
+  @media (min-width: $tablet-width) {
+    margin-top: 19px;
+    display: inline-block;
+  }
 }
 
 .location__map {
+  position: relative;
   margin: 0 auto;
-  width: 320px;
+  overflow-x: hidden;
+
+  & iframe {
+    width: 100%;
+
+    @media (min-width: $tablet-width) {
+      height: 400px;
+    }
+  }
 }

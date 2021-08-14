@@ -1,4 +1,50 @@
 .social__list {
+  display: flex;
+  justify-content: center;
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+.social__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include size (44px, 44px);
+}
+
+.social__link {
+  display: inline-block;
+  font-size: 0.01px;
+
+  @include size (44px, 44px);
+
+
+  &--vk {
+    background: url("../img/vk_social.svg") no-repeat center center;
+    background-size: 23px 16px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 30px 22px;
+    }
+  }
+
+  &--inst {
+    background: url("../img/inst_social.svg") no-repeat center center;
+    background-size: 16px 16px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 23px 23px;
+    }
+  }
+
+  &--fb {
+    background: url("../img/fb_social.svg") no-repeat center center;
+    background-size: 22px 22px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 28px 33px;
+    }
+  }
 }

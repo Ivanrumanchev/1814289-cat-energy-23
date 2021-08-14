@@ -1,8 +1,27 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    text-align: right;
+    background-size: 23px 23px;
+  }
+}
+
 .copyright__text {
-  font-family: $text_font;
-  font-weight: 400;
-  font-size: 16 * $font-size;
-  line-height: 18.4 * $line-height;
+  margin-top: 6px;
   color: $special_1_color;
   text-decoration: none;
+
+  @include font ($secondary-main-size, (1.15 * $secondary-main-size), 400, $text_font);
+
+  @media (min-width: $tablet-width) {
+    margin-right: 22px;
+  }
+}
+
+.copyright__logo {
+  @include size (27px, 34px);
 }

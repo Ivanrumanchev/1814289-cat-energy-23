@@ -9,25 +9,27 @@
   <body class="page__body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo-cat">
-          <img src="img/logo-mobile.svg" width="33" height="37" alt="Кот энерджи">
-        </a>
-        <a class="page-header__logo-text">
-          <img src="img/logo2.svg" width="101" height="18" alt="Кэт энерджи">
-        </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">
+        <div class="page-header__logo">
+          <a class="page-header__logo-cat">
+            <img src="img/logo-mobile.svg" width="33" height="37" alt="Кот энерджи">
+          </a>
+          <a class="page-header__logo-text">
+            <img src="img/logo2.svg" width="101" height="18" alt="Кэт энерджи">
+          </a>
+          <button class="page-header__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
+        </div>
+        <nav class="main-nav">
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--active">
+              <li class="main-nav__item main-nav__item-index main-nav__item--active main-nav__item--active-index">
                 <a>Главная</a>
               </li>
-              <li class="main-nav__item">
+              <li class="main-nav__item main-nav__item-index">
                 <a href="catalog.html">Каталог продукции</a>
               </li>
-              <li class="main-nav__item">
+              <li class="main-nav__item main-nav__item-index">
                 <a href="form.html">Подбор программы</a>
               </li>
             </ul>
@@ -38,6 +40,7 @@
     <main class="page-main">
       <h1 class="visually-hidden">Кэт энерджи — здоровая еда для вашей кошки</h1>
       <section class="preview">
+        <div class="preview__background-cat"></div>
         <div class="preview__wrapper">
           <h2 class="preview__title">
             Функциональное питание для котов
@@ -97,31 +100,25 @@
         <div class="example__wrapper">
           <h2 class="example__title">Живой пример</h2>
           <p class="example__content">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-          <ul class="example__list-numbers">
-            <li class="example__item-numbers">
-              <fieldset class="example__result result">
-                <legend class="result__legend">снижение веса</legend>
-                <div class="result__wrapper">
-                  <b class="result__text">5 кг</b>
-                </div>
-              </fieldset>
-            </li>
-            <li class="example__item-numbers">
-              <fieldset class="example__result result">
-                <legend class="result__legend">затрачено времени</legend>
-                <div class="result__wrapper">
-                  <b class="result__text">60 дней</b>
-                </div>
-              </fieldset>
-            </li>
-          </ul>
-          <p class="example__cost">Затраты на питание: <span>15 000 РУБ.</span></p>
+          <div class="example__results">
+            <ul class="example__list-numbers">
+              <li class="example__item-numbers result">
+                <div class="result__legend">снижение веса</div>
+                <p class="result__text">5 кг</p>
+              </li>
+              <li class="example__item-numbers result">
+                <div class="result__legend">затрачено времени</div>
+                <p class="result__text">60 дней</p>
+              </li>
+            </ul>
+            <p class="example__cost">Затраты на питание: <span>15 000 РУБ.</span></p>
+          </div>
           <div class="example__slider slider">
             <ul class="example__list-picture slider__list">
               <li class="example__item-picture slider__item">
                 <img class="example__cat-img" width="311" height="232" src="img/cat-fat.png" alt="Толстый кот">
               </li>
-              <li class="example__item-picture slider__item">
+              <li class="example__item-picture slider__item visually-hidden">
                 <img class="example__cat-img" height="232" src="img/cat-skinny.png" alt="Тощий кот">
               </li>
             </ul>
@@ -137,14 +134,12 @@
           Как нас найти
         </h2>
         <div class="location__wrapper">
-          <div class="location__contacts contacts">
-            <b class="contacts__title">Приглашаем к сотрудничеству дилеров</b>
-            <p class="contacts__text">
-              ул. Большая
-              Конюшенная, д. 19/8
-              <span class="contacts__sity">Санкт-Петербург</span>
-            </p>
-          </div>
+          <b class="location__title">Приглашаем к сотрудничеству дилеров</b>
+          <p class="location__text">
+            ул. Большая
+            Конюшенная, д. 19/8
+            <span class="location__sity">Санкт-Петербург</span>
+          </p>
         </div>
         <div class="location__map">
           <iframe src="https://www.google.com/maps/d/embed?mid=1UtwxB7h7rJJ5Z1W5GFTIKj6sAGQ2jsdB&hl=ru" width="320" height="362"></iframe>

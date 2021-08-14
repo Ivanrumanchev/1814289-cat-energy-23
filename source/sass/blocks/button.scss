@@ -1,15 +1,18 @@
 .button {
-  display: table-cell;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   vertical-align: middle;
-  width: 280px;
   text-align: center;
-  height: 40px;
-  line-height: 18 * $line-height;
+
   color: $background_special_2;
   text-transform: uppercase;
   text-decoration: none;
   background-color: $background;
+
+  @include size (280px, 40px);
+  @include font ($secondary-main-size, ceil(1.25 * $secondary-main-size));
 }
 
 .button--disabled {

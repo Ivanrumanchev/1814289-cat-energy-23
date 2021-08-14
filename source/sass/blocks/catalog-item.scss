@@ -3,19 +3,17 @@
 }
 
 .catalog-item__name {
-  font-size: 16 * $font-size;
-  line-height: 20 * $line-height;
   text-transform: uppercase;
   color: $special_2_color;
   text-decoration: none;
+
+  @include font ($secondary-main-size, ceil(1.25 * $secondary-main-size));
 }
 
 .catalog-item__features-table {
-  font-family: $text_font;
-  font-weight: 400;
-  font-size: 12 * $font-size;
-  line-height: 16 * $line-height;
   color: $special_1_color;
+
+  @include font ($main-size-small, ceil(1.33 * $main-size-small), 400, $text_font);
 }
 
 .catalog__item {
@@ -28,6 +26,8 @@
 
     .catalog-item__text {
       text-align: center;
+
+      @include font ($main-size-small, ceil(1.33 * $main-size-small), 400, $text_font);
     }
   }
 }
@@ -35,15 +35,11 @@
 .catalog-item__link-plus {
   display: block;
   margin: 0 auto;
-  width: 30px;
-  height: 30px;
+
   font-size: 0.01px;
   color: $background_special_2;
   background: url("../img/plus.svg") no-repeat;
   background-size: 30px 30px;
-}
 
-.catalog-item__button {
-  font-size: 16 * $font-size;
-  line-height: 20 * $line-height;
+  @include size (30px);
 }

@@ -5,18 +5,52 @@
 .page-main__wrapper {
   box-sizing: border-box;
   margin: 0 auto;
-  width: 320px;
-  padding-left: 20px;
+  min-width: 280px;
+  width: 87.5%;
+  padding-top: 27px;
+  padding-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 628px;
+    width: 81.7%;
+    padding-top: 62px;
+    padding-bottom: 66px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    padding-top: 187px;
+  }
 }
 
 .page-main__title {
-  font-size: 36 * $font-size;
-  font-weight: 400;
-  line-height: 36 * $line-height;
+  margin: 0;
+  margin-bottom: 37px;
+
+  @include font ($secondary-title-size);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+
+    @include font ($big-title-size);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 56px;
+  }
 }
 
 .page-main__lead {
-  font-size: 14 * $font-size;
-  line-height: 18 * $line-height;
+  margin: 0;
+  width: 226px;
+
   text-transform: uppercase;
+
+  @include font ($main-size, ceil(1.28 * $main-size));
+
+  @media (min-width: $tablet-width) {
+    width: 323px;
+
+    @include font ($title-size-smaller, ceil(1.5 * $main-size));
+  }
 }
