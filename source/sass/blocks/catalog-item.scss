@@ -1,40 +1,119 @@
+.catalog-item {
+  padding-top: 19px;
+  padding-bottom: 25px;
+  box-sizing: border-box;
+
+  @media (max-width: $mobile-width-only) {
+    margin: 0 auto;
+    min-width: 280px;
+    width: 87.5%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+      background-color: $catalog-border-color;
+
+      @include size (100%, 1px);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 430px;
+    padding-top: 161px;
+    padding-bottom: 39px;
+    padding-left: 39px;
+    padding-right: 37px;
+
+    background-color: $background_special;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 162px;
+    padding-bottom: 40px;
+    padding-right: 38px;
+  }
+}
+
 .catalog-item__link {
+  position: absolute;
   text-decoration: none;
 }
 
 .catalog-item__name {
+  display: block;
+  margin: 0;
+  margin-left: 50%;
   text-transform: uppercase;
   color: $special_2_color;
   text-decoration: none;
 
+  @include size (76px, auto);
   @include font ($secondary-main-size, ceil(1.25 * $secondary-main-size));
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 145px;
+    text-align: center;
+
+    @include font ($title-size-smaller, ceil(1.2 * $secondary-main-size));
+  }
 }
 
 .catalog-item__features-table {
+  display: block;
+  margin-left: 50%;
+  margin-top: 14px;
+  margin-bottom: 22px;
+
+  border-collapse: collapse;
+
   color: $special_1_color;
 
   @include font ($main-size-small, ceil(1.33 * $main-size-small), 400, $text_font);
-}
 
-.catalog__item {
-  &:last-child {
-    .catalog-item__name {
-      display: block;
-      text-align: center;
-      color: $special_3_color;
+  &__column-2 {
+    text-align: right;
+  }
+
+  td {
+    min-width: 70px;
+    width: 100%;
+    padding: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    min-width: 169px;
+    width: 100%;
+
+    @include font ($secondary-main-size, $secondary-main-size, 400, $text_font);
+
+    tr {
+      border-bottom: 1px solid $checkbox_color;
     }
 
-    .catalog-item__text {
-      text-align: center;
-
-      @include font ($main-size-small, ceil(1.33 * $main-size-small), 400, $text_font);
+    td {
+      padding-top: 7px;
+      padding-bottom: 9px;
     }
   }
 }
 
-.catalog-item__link-plus {
+.catalog-item__button {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.catalog-item__plus {
   display: block;
   margin: 0 auto;
+  margin-bottom: 23px;
 
   font-size: 0.01px;
   color: $background_special_2;
@@ -42,4 +121,27 @@
   background-size: 30px 30px;
 
   @include size (30px);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 49px;
+    background-size: 60px 60px;
+
+    @include size (60px);
+  }
+}
+
+.catalog-item__text {
+  margin-top: 8px;
+  margin-bottom: 21px;
+  text-align: center;
+
+  @include font ($main-size-small, ceil(1.33 * $main-size-small), 400, $text_font);
+
+  @media (min-width: $tablet-width) {
+    margin-top: 23px;
+    margin-bottom: 87px;
+    width: 167px;
+
+    @include font ($secondary-main-size, ceil(1.12 * $secondary-main-size), 400, $text_font);
+  }
 }

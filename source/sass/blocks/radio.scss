@@ -1,9 +1,11 @@
 .radio {
+  box-sizing: border-box;
   padding-top: 28px;
   padding-bottom: 25px;
 
   @media (min-width: $tablet-width) {
-    padding: 30px 28px;
+    height: 100%;
+    padding: (30px - 1) 28px;
     border: 1px solid $form-border-color;
   }
 }
@@ -15,7 +17,7 @@
   color: $special_2_color;
 
   &:not(:last-child) {
-    padding-bottom: 24px;
+    padding-bottom: 23px;
   }
 
   @media (min-width: $tablet-width) {

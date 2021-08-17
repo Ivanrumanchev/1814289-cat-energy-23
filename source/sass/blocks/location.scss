@@ -1,5 +1,11 @@
 .location {
   position: relative;
+  min-width: 320px;
+  background-color: $background_special;
+
+  &--index {
+    background-color: $main_theme_color;
+  }
 }
 
 .location__wrapper {

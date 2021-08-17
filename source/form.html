@@ -43,68 +43,76 @@
         <p class="page-main__lead">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       </div>
       <form class="form" action="https://echo.htmlacademy.ru/courses" method="POST">
-        <div class="form__features">
-          <div class="form__wrapper">
-            <div class="form__row">
-              <label class="label" for="name">Имя:*</label>
-              <input class="input-text" type="text" name="name" id="name" placeholder="БАРСИК" autofocus required>
-            </div>
-            <div class="form__row">
-              <label class="label" for="weight">Вес (кг):*</label>
-              <input class="input-text" type="text" name="weight" id="weight" placeholder="7" required>
-            </div>
-            <div class="form__row">
-              <label class="label" for="age">Возраст (лет):</label>
-              <input class="input-text" type="text" name="age" id="age" placeholder="7">
+        <div class="form__layout">
+          <div class="form__features">
+            <div class="form__wrapper--features">
+              <div class="form__row">
+                <label class="label" for="name">Имя:*</label>
+                <input class="input-text" type="text" name="name" id="name" placeholder="БАРСИК" autofocus required>
+              </div>
+              <div class="form__row">
+                <label class="label" for="weight">Вес (кг):*</label>
+                <input class="input-text" type="text" name="weight" id="weight" placeholder="7" required>
+              </div>
+              <div class="form__row">
+                <label class="label" for="age">Возраст (лет):</label>
+                <input class="input-text" type="text" name="age" id="age" placeholder="7">
+              </div>
             </div>
           </div>
-        </div>
-        <div class="form__radio">
-          <div class="form__wrapper radio">
-            <input class="radio__input" type="radio" name="radio" value="slim" id="slim" checked>
-            <label for="slim" class="radio__label label">Похудение</label>
-            <br>
-            <input class="radio__input" type="radio" name="radio" value="fat" id="fat">
-            <label for="fat" class="radio__label label">Набор массы</label>
-            <br>
-            <input class="radio__input" type="radio" name="radio" value="unknown" id="unknown">
-            <label for="unknown" class="radio__label label">Не знаю (нужен ваш совет)</label>
+          <div class="form__radio">
+            <div class="form__wrapper--features radio">
+              <input class="radio__input" type="radio" name="radio" value="slim" id="slim" checked>
+              <label for="slim" class="radio__label label">Похудение</label>
+              <br>
+              <input class="radio__input" type="radio" name="radio" value="fat" id="fat">
+              <label for="fat" class="radio__label label">Набор массы</label>
+              <br>
+              <input class="radio__input" type="radio" name="radio" value="unknown" id="unknown">
+              <label for="unknown" class="radio__label label">Не знаю (нужен ваш совет)</label>
+            </div>
           </div>
         </div>
         <div class="form__contacts-person">
           <div class="form__wrapper">
-            <div class="form__legend">Контактные данные (владельца кота)</div>
-            <div class="form__row">
-              <label class="label" for="mail">E-MAIL:*</label>
-              <input class="input-text" type="email" name="mail" id="mail" placeholder="KUKLACHEV@GMAIL.COM" required>
-            </div>
-            <div class="form__row">
-              <label class="label" for="phone">Телефон:*</label>
-              <input class="input-text" type="tel" name="phone" id="phone" pattern="\8\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="8 (960) 900-60-90" required>
+            <div class="form__legend form__legend--contacts-person">Контактные данные (владельца кота)</div>
+            <div class="form__layout">
+              <div class="form__row form__row--contacts-person">
+                <label class="label" for="mail">E-MAIL:*</label>
+                <input class="input-text" type="email" name="mail" id="mail" placeholder="KUKLACHEV@GMAIL.COM" required>
+              </div>
+              <div class="form__row form__row--contacts-person">
+                <label class="label" for="phone">Телефон:*</label>
+                <input class="input-text" type="tel" name="phone" id="phone" pattern="\8\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="8 (960) 900-60-90" required>
+              </div>
             </div>
           </div>
         </div>
-        <div class="form__comment comment">
+        <div class="form__comment">
           <div class="form__wrapper">
-            <div class="form__legend">Комментарий:</div>
-            <textarea class="comment__textarea" name="comment" id="comment" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <div class="form__legend form__legend--comment">Комментарий:</div>
+            <textarea class="form__textarea" name="comment" id="comment" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </div>
         <div class="form__add add">
           <div class="form__wrapper">
-            <div class="form__legend">Дополнительно:</div>
-            <input class="add__input input-checkbox visually-hidden" type="checkbox" name="nosugar" id="nosugar" checked>
-            <label for="nosugar" class="add__label label">Сахарозаменитель</label>
-            <input class="add__input input-checkbox visually-hidden" type="checkbox" name="water" id="water">
-            <label for="water" class="add__label label">Питьевая вода</label>
-            <input class="add__input input-checkbox visually-hidden" type="checkbox" name="milk" id="milk">
-            <label for="milk" class="add__label label">Молоко</label>
-            <input class="add__input input-checkbox visually-hidden" type="checkbox" name="vitamins" id="vitamins">
-            <label for="vitamins" class="add__label label">Витамины</label>
+            <div class="form__legend form__legend--add">Дополнительно:</div>
+            <div class="add__layout">
+              <input class="add__input visually-hidden" type="checkbox" name="nosugar" id="nosugar" checked>
+              <label for="nosugar" class="add__label label">Сахарозаменитель</label>
+              <input class="add__input visually-hidden" type="checkbox" name="water" id="water">
+              <label for="water" class="add__label label">Питьевая вода</label>
+              <input class="add__input visually-hidden" type="checkbox" name="milk" id="milk">
+              <label for="milk" class="add__label label">Молоко</label>
+              <input class="add__input visually-hidden" type="checkbox" name="vitamins" id="vitamins">
+              <label for="vitamins" class="add__label label">Витамины</label>
+            </div>
           </div>
         </div>
-        <input class="form__submit button" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ">
-        <p class="form__required">* — Обязательные поля</p>
+        <div class="form__send">
+          <input class="form__submit button" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ">
+          <p class="form__required">* — Обязательные поля</p>
+        </div>
       </form>
       <section class="location">
         <h2 class="visually-hidden">

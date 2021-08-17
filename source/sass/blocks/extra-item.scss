@@ -1,8 +1,52 @@
+.extra-item {
+  display: grid;
+  grid-template-areas:
+    "name name"
+    "weight cost"
+    "button button";
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  padding-top: 13px;
+  padding-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-areas:
+      "name name weight cost"
+      "button button button button";
+    grid-template-columns: 1fr 1fr 1fr 14.7%;
+
+    padding-top: 26px;
+    padding-bottom: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-areas: "name weight cost button";
+    grid-template-columns: 2fr 1.2fr 0.5fr 244px;
+    grid-column-gap: 38px;
+
+    padding-top: 15px;
+    padding-bottom: 17px;
+  }
+}
+
 .extra-item__name {
+  grid-area: name;
+  padding-bottom: 13px;
   text-transform: uppercase;
   color: $special_2_color;
 
   @include font ($secondary-main-size);
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 22px;
+
+    @include font ($title-size-smaller);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: (25px - 15);
+    padding-bottom: 0;
+  }
 }
 
 .extra-item__weight,
@@ -10,4 +54,37 @@
   color: $special_1_color;
 
   @include font ($main-size, $main-size, 400, $text_font);
+
+  @media (min-width: $tablet-width) {
+    @include font ($secondary-main-size, ceil(1.25 * $secondary-main-size), 400, $text_font);
+  }
+}
+
+.extra-item__weight {
+  grid-area: weight;
+  padding-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    padding-top: (28px - 15);
+  }
+}
+
+.extra-item__cost {
+  grid-area: cost;
+  text-align: right;
+
+  @media (min-width: $desktop-width) {
+    padding-top: (28px - 15);
+  }
+}
+
+.extra-item__button {
+  grid-area: button;
+  width: 100%;
 }

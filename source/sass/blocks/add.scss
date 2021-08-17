@@ -1,8 +1,19 @@
+.add__layout {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+
 .add__label {
   display: block;
   position: relative;
+  box-sizing: border-box;
   padding-left: 46px;
   margin-bottom: 25px;
+  margin-right: 0;
   color: $basic_color;
 
   &::before {
@@ -15,11 +26,25 @@
 
     @include size (30px);
   }
+
+  @media (min-width: $tablet-width) {
+    min-width: 305px;
+    padding-left: 59px;
+    margin-bottom: 42px;
+
+    &::before {
+      @include size (40px);
+    }
+  }
 }
 
 .add__input:checked + .add__label::before {
   background: url("../img/check.svg") no-repeat center;
   background-size: 18px 14px;
+
+  @media (min-width: $tablet-width) {
+    background-size: 24px 19px;
+  }
 }
 
 .add__input:hover + .add__label::before {

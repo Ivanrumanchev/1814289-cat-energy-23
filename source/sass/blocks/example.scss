@@ -1,6 +1,7 @@
 .example {
   background-color: $example_background;
   position: relative;
+  min-width: 320px;
 
   @media (min-width: $tablet-width) {
     background-color: inherit;
