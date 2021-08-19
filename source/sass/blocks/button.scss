@@ -4,16 +4,34 @@
   align-items: center;
   box-sizing: border-box;
 
-  color: $background_special_2;
+  color: $main_theme_color;
   text-transform: uppercase;
   text-decoration: none;
   background-color: $background;
 
   @include size (280px, 40px);
   @include font ($secondary-main-size, ceil(1.25 * $secondary-main-size));
+
+  &:hover {
+    background-color: $background_button;
+  }
+
+  &:active {
+    background-color: $background_button;
+    color: $button_special_1_color;
+  }
 }
 
 .button--disabled {
   background-color: $background_special;
   color: $special_1_color;
+
+  &:hover {
+    background-color: $catalog-border-color;
+  }
+
+  &:active {
+    background-color: $catalog-border-color;
+    color: $button_special_2_color;
+  }
 }

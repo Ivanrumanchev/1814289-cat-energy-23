@@ -114,7 +114,7 @@
   background-size: cover;
   position: relative;
 
-  color: $background_special_2;
+  color: $main_theme_color;
 
   @include size (100%, 289px);
   @include font ($secondary-main-size, ceil(1.25 * $secondary-main-size), 400, $text_font);

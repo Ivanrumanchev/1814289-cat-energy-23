@@ -1,6 +1,11 @@
+.slider__toggles {
+  position: relative;
+}
+
 .slider__toggle {
   text-transform: uppercase;
   padding-bottom: 0;
+  cursor: pointer;
 
   @include font ($secondary-main-size, ceil(1.25 * $secondary-main-size));
 
@@ -12,6 +17,64 @@
     border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
 
     @include font ($main-header-size, ceil(1.5 * $main-header-size));
+
+    &:hover {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    }
+
+    &:active {
+      border-bottom: none;
+    }
+  }
+
+  &-before--checked {
+    &::after {
+      content: "";
+      z-index: 3;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-100%, -50%);
+      min-width: 35px;
+      box-sizing: border-box;
+      border-radius: 6px;
+      background-color: $background;
+
+      @include size (16.6%, 6px);
+    }
+  }
+
+  &-after--checked {
+    &::after {
+      content: "";
+      z-index: 3;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(0%, -50%);
+      min-width: 35px;
+      box-sizing: border-box;
+      border-radius: 6px;
+      background-color: $background;
+
+      @include size (16.6%, 6px);
+    }
+  }
+
+  &--check::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 84px;
+
+    box-sizing: border-box;
+    border: 1px solid $checkbox_color;
+    border-radius: 6px;
+    background-color: $main_theme_color;
+
+    @include size (40%, 14px);
   }
 }
 

@@ -9,18 +9,18 @@
   <body class="page__body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <div class="page-header__logo">
-          <a class="page-header__logo-cat">
+        <div class="page-header__logo page-header__logo--index">
+          <a class="page-header__logo-cat page-header__logo-cat--index">
             <img src="img/logo-mobile.svg" width="33" height="37" alt="Кот энерджи">
           </a>
-          <a class="page-header__logo-text">
+          <a class="page-header__logo-text page-header__logo-text--index">
             <img src="img/logo2.svg" width="101" height="18" alt="Кэт энерджи">
           </a>
-          <button class="page-header__toggle" type="button">
+        </div>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-        </div>
-        <nav class="main-nav">
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
               <li class="main-nav__item main-nav__item-index main-nav__item--active main-nav__item--active-index">
@@ -115,16 +115,16 @@
           </div>
           <div class="example__slider slider">
             <ul class="example__list-picture slider__list">
-              <li class="example__item-picture slider__item">
+              <li class="example__item-picture slider__item slider__item--before visually-hidden">
                 <img class="example__cat-img" width="311" height="232" src="img/cat-fat.png" alt="Толстый кот">
               </li>
-              <li class="example__item-picture slider__item visually-hidden">
+              <li class="example__item-picture slider__item slider__item--after slider__item--current">
                 <img class="example__cat-img" height="232" src="img/cat-skinny.png" alt="Тощий кот">
               </li>
             </ul>
             <p class="example__toggles slider__toggles">
-              <button class="slider__toggle slider__toggle-before slider__toggle--current" type ="button">Было</button>
-              <button class="slider__toggle slider__toggle-after" type ="button">Стало</button>
+              <button class="slider__toggle slider__toggle--check slider__toggle-before" type ="button">Было</button>
+              <button class="slider__toggle slider__toggle-after slider__toggle-after--checked" type ="button">Стало</button>
             </p>
           </div>
         </div>
@@ -172,5 +172,54 @@
         </div>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+
+      var toggleBefore = document.querySelector('.slider__toggle-before');
+      var toggleAfter = document.querySelector('.slider__toggle-after');
+      var sliderBefore = document.querySelector('.slider__item--before');
+      var sliderAfter = document.querySelector('.slider__item--after');
+
+      toggleAfter.addEventListener('click', function() {
+        if (sliderBefore.classList.contains('slider__item--current')) {
+          sliderBefore.classList.add('visually-hidden');
+          sliderAfter.classList.remove('visually-hidden');
+          sliderBefore.classList.remove('slider__item--current');
+          sliderAfter.classList.add('slider__item--current');
+
+          toggleBefore.classList.remove('slider__toggle-before--checked');
+          toggleAfter.classList.add('slider__toggle-after--checked');
+          toggleBefore.classList.add('slider__toggle--check');
+          toggleAfter.classList.remove('slider__toggle--check');
+        }
+      });
+
+      toggleBefore.addEventListener('click', function() {
+        if (sliderAfter.classList.contains('slider__item--current')) {
+          sliderAfter.classList.add('visually-hidden');
+          sliderBefore.classList.remove('visually-hidden');
+          sliderAfter.classList.remove('slider__item--current');
+          sliderBefore.classList.add('slider__item--current');
+
+          toggleAfter.classList.remove('slider__toggle-after--checked');
+          toggleBefore.classList.add('slider__toggle-before--checked');
+          toggleAfter.classList.add('slider__toggle--check');
+          toggleBefore.classList.remove('slider__toggle--check');
+        }
+      });
+    </script>
   </body>
 </html>
