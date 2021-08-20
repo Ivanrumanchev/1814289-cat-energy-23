@@ -10,17 +10,17 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <div class="page-header__logo">
-          <a class="page-header__logo-cat">
+          <a class="page-header__logo-cat" href="index.html">
             <img src="img/logo-mobile.svg" width="33" height="37" alt="Кот энерджи">
           </a>
-          <a class="page-header__logo-text">
+          <a class="page-header__logo-text" href="index.html">
             <img src="img/logo2.svg" width="101" height="18" alt="Кэт энерджи">
           </a>
-          <button class="page-header__toggle" type="button">
+        </div>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-        </div>
-        <nav class="main-nav">
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
               <li class="main-nav__item">
@@ -157,5 +157,21 @@
         </div>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>

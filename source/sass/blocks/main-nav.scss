@@ -1,3 +1,91 @@
+.main-nav__toggle {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  padding: 0;
+  display: block;
+  background-color: $main_theme_color;
+  border: none;
+  cursor: pointer;
+
+  @include size (50px, 50px);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 24px;
+  right: 20px;
+  background-color: $basic_color;
+  box-shadow: 0 8px 0 $basic_color, 0 16px 0 $basic_color;
+
+  @include size (24px, 1.5px);
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  opacity: 0.3;
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: 32px;
+    right: 23px;
+    width: 24.8px;
+    height: 1.5px;
+    background-color: $basic_color;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__wrapper {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    z-index: 10;
+    background-color: $main_theme_color;
+    width: 100%;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__wrapper {
+  position: static;
+}
+
+.main-nav--nojs .main-nav__item {
+  display: block;
+}
+
 .main-nav__list {
   padding: 0;
   margin: 0;
@@ -8,8 +96,9 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    flex: 1;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
     min-width: 440px;
 
     @include font ($secondary-header-size, ceil(1.33 * $secondary-header-size), 400);
@@ -29,7 +118,11 @@
   text-align: center;
 
   @media (max-width: $mobile-width-only) {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
     border-bottom: 1px solid #e6e6e6;
+    min-height: 65px;
   }
 
   a {
@@ -37,12 +130,22 @@
     position: relative;
     box-sizing: border-box;
     padding-top: 22px;
-    height: 65px;
+    padding-bottom: 24px;
+    min-height: 65px;
     text-decoration: none;
     color: $basic_color;
+    word-wrap: break-word;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
 
     @media (min-width: $tablet-width) {
-      height: 76px;
+      min-height: 76px;
       display: flex;
       align-items: flex-end;
       padding-top: 0;
@@ -51,7 +154,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      height: 112px;
+      min-height: 112px;
       padding-bottom: 13px;
     }
   }
@@ -64,41 +167,47 @@
     }
   }
 
-  &:first-of-type {
-    @media (max-width: $mobile-width-only) {
-      border-top: 1px solid #e6e6e6;
+  &--active a {
+    &:hover {
+      opacity: 1;
+    }
 
-      a {
-        height: 64px;
+    &:active {
+      opacity: 1;
+    }
+
+    &::before {
+      @media (min-width: $tablet-width) {
+        content: "";
+        position: absolute;
+        top: 76px;
+        left: 0;
+        background-color: $background;
+
+        @include size (100%, 2px);
+      }
+
+      @media (min-width: $desktop-width) {
+        z-index: 2;
+        content: "";
+        position: absolute;
+        top: 107px;
+        left: 0;
+
+        @include size (100%, 2px);
       }
     }
   }
 
-  &--active a::before {
-    @media (min-width: $tablet-width) {
-      content: "";
-      position: absolute;
-      top: 76px;
-      left: 0;
-      background-color: $background;
-
-      @include size (100%, 2px);
+  &--active-index {
+    @media (max-width: $mobile-width-only) {
+      border-top: 1px solid #e6e6e6;
     }
 
-    @media (min-width: $desktop-width) {
-      z-index: 2;
-      content: "";
-      position: absolute;
-      top: 107px;
-      left: 0;
-
-      @include size (100%, 2px);
-    }
-  }
-
-  &--active-index a::before {
-    @media (min-width: $desktop-width) {
-      background-color: $main_theme_color;
+    a::before {
+      @media (min-width: $desktop-width) {
+        background-color: $main_theme_color;
+      }
     }
   }
 }

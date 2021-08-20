@@ -170,12 +170,25 @@
     background: url("../img/arrow.svg") no-repeat;
     background-size: 24px 12px;
 
-    @include size (32px, 10px);
+    @include size (32px, 12px);
 
     @media (min-width: $tablet-width) {
       left: 133px;
-      top: 50%;
-      transform: translate(0, -50%);
+    }
+  }
+
+  &:hover {
+    &::after {
+      background-size: 32px 12px;
+      transition: 0.3s;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      background-size: 32px 12px;
     }
   }
 }

@@ -39,6 +39,14 @@
     padding-top: 6px;
     border-bottom: none;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__social {
@@ -60,5 +68,9 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
