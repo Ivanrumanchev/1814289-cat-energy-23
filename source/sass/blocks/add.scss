@@ -59,6 +59,7 @@
   }
 }
 
+.add__input:active + .add__label::before,
 .add__input:focus + .add__label::before {
   border: 2px solid $special_1_color;
 }

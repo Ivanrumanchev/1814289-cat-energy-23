@@ -110,6 +110,8 @@
   }
 
   &--contacts-person {
+    position: relative;
+
     &:last-child {
       @media (min-width: $desktop-width) {
         margin-bottom: 20px;
@@ -248,6 +250,17 @@
 
     @include size (100%, 174px);
     @include font ($title-size-smaller, ceil(1.5 * $title-size-smaller));
+  }
+
+  border: 1px solid $form-border-color;
+
+  &:hover {
+    border: 1px solid $checkbox_color;
+  }
+
+  &:focus {
+    border: 2px solid $special_1_color;
+    outline: none;
   }
 }
 

@@ -6,6 +6,7 @@
   padding-left: 15px;
   padding-right: 15px;
   box-sizing: border-box;
+
   text-transform: uppercase;
   color: $special_1_color;
 
@@ -17,5 +18,24 @@
     height: 52px;
 
     @include font ($title-size-smaller, ceil(1.5 * $title-size-smaller));
+  }
+
+  &:hover {
+    border: 1px solid $checkbox_color;
+  }
+
+  &:focus {
+    border: 2px solid $special_1_color;
+    outline: none;
+  }
+
+  &:not(:focus):not(:placeholder-shown):invalid {
+    border: 2px solid $invalid-color;
+    box-shadow: none;
+    outline: none;
+  }
+
+  &--contacts-person {
+    padding-right: 45px;
   }
 }
