@@ -9,3 +9,39 @@
     @include font ($title-size-smaller, ceil(1.5 * $title-size-smaller));
   }
 }
+
+.label--mail {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 17px;
+    transform: translate(0, -50%);
+    background: url("../img/email.svg") no-repeat;
+    background-size: 18px 13px;
+
+    @include size(18px, 13px);
+
+    @media (min-width: $tablet-width) {
+      right: 19px;
+    }
+  }
+}
+
+.label--phone {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    transform: translate(0, -50%);
+    background: url("../img/phone.svg") no-repeat;
+    background-size: 20px 20px;
+
+    @include size(20px, 20px);
+
+    @media (min-width: $tablet-width) {
+      right: 17px;
+    }
+  }
+}
