@@ -11,7 +11,11 @@
       <div class="page-header__wrapper">
         <div class="page-header__logo page-header__logo--index">
           <a class="page-header__logo-cat page-header__logo-cat--index">
-            <img src="img/logo-mobile.svg" width="33" height="37" alt="Кот энерджи">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img src="img/logo-mobile.svg" width="33" height="37" alt="Кот энерджи">
+            </picture>
           </a>
           <a class="page-header__logo-text page-header__logo-text--index">
             <img src="img/logo2.svg" width="101" height="18" alt="Кэт энерджи">
@@ -48,7 +52,11 @@
           <p class="preview__slogan">
             Занялся собой? Займись котом!
           </p>
-          <img class="preview__img" src="img/cat_energy_preview.png" width="280" height="270" alt="Cat Energy PRO 500 г курица" >
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/cat_energy_preview_desktop.png 1x, img/cat_energy_preview_desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/cat_energy_preview_tablet.png 1x, img/cat_energy_preview_tablet@2x.png 2x">
+            <img class="preview__img" src="img/cat_energy_preview.png" width="280" height="270" srcset="img/cat_energy_preview@2x.png 2x" alt="Cat Energy PRO 500 г курица">
+          </picture>
           <a class="preview__to-form button" href="form.html">Подобрать программу</a>
         </div>
       </section>
@@ -116,10 +124,10 @@
           <div class="example__slider slider">
             <ul class="example__list-picture slider__list">
               <li class="example__item-picture slider__item slider__item--before visually-hidden">
-                <img class="example__cat-img" width="311" height="232" src="img/cat-fat.png" alt="Толстый кот">
+                <img class="example__cat-img" width="311" height="232" src="img/cat-fat.png" srcset="img/cat-fat@2x.png 2x" alt="Толстый кот">
               </li>
               <li class="example__item-picture slider__item slider__item--after slider__item--current">
-                <img class="example__cat-img" height="232" src="img/cat-skinny.png" alt="Тощий кот">
+                <img class="example__cat-img" height="232" src="img/cat-skinny.png" srcset="img/cat-skinny@2x.png 2x" alt="Тощий кот">
               </li>
             </ul>
             <p class="example__toggles slider__toggles">
