@@ -32,7 +32,7 @@
   height: 65px;
 
   @media (max-width: $mobile-width-only) {
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid $page-header_border_color;
   }
 
   @media (min-width: $tablet-width) {
@@ -53,35 +53,6 @@
   &--index {
     border-bottom: none;
   }
-
-
-  /*
-  width: 87.5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  @media (max-width: $mobile-width-only) {
-    margin: 0 auto;
-  }
-
-  @media (min-width: $tablet-width) {
-    display: block;
-    min-width: 174px;
-    background: url("../img/logo-tablet.svg") no-repeat;
-    background-size: 174px 52px;
-
-    @include size (174px, 52px);
-  }
-
-  @media (min-width: $desktop-width) {
-    display: block;
-    min-width: 202px;
-    background: url("../img/logo-desktop.svg") no-repeat;
-    background-size: 202px 59px;
-
-    @include size (202px, 59px);
-  }*/
 }
 
 .page-header__logo-cat {
@@ -130,6 +101,14 @@
 
   img {
     @include size (33.3px, 37.6px);
+
+    @media (min-width: $tablet-width) {
+      @include size (174px, 52px);
+    }
+
+    @media (min-width: $desktop-width) {
+      @include size (202px, 59px);
+    }
   }
 }
 

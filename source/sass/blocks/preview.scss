@@ -12,6 +12,11 @@
   background: url("../img/bg_preview_cat.png") no-repeat 50% 0;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background: url("../img/bg_preview_cat@2x.png") no-repeat 50% 0;
+    background-size: cover;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -35,6 +40,11 @@
     height: 694px;
     background: url("../img/bg_preview_cat_desktop.png") no-repeat;
     background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/bg_preview_cat_desktop@2x.png") no-repeat 50% 0;
+      background-size: cover;
+    }
 
     &::after {
       content: "";
@@ -131,20 +141,16 @@
     top: 263px;
     left: 50%;
     transform: translate(-50%, 0%);
-    padding: 304.5px 354.5px;
-    background: url("../img/cat_energy_preview_tablet.png");
-    background-size: 709px 609px;
 
-    @include size (0%, 0%);
+    @include size (709px, 609px);
   }
 
   @media (min-width: $desktop-width) {
     top: 141px;
     left: 448px;
     transform: translate(0%, 0%);
-    padding: 249.5px 276px;
-    background: url("../img/cat_energy_preview_desktop.png") no-repeat;
-    background-size: 552px 499px;
+
+    @include size (552px, 499px);
   }
 }
 

@@ -51,6 +51,16 @@
         left: 50%;
         transform: translate(-50%, 0);
       }
+
+      @media (min-width: $desktop-width) {
+        top: -52px;
+      }
+    }
+
+    .catalog-item__img {
+      @media (min-width: $tablet-width) {
+        @include size (163px, 174px);
+      }
     }
   }
 
@@ -63,6 +73,16 @@
         top: -73px;
         left: 50%;
         transform: translate(-50%, 0);
+      }
+
+      @media (min-width: $desktop-width) {
+        top: -80px;
+      }
+    }
+
+    .catalog-item__img {
+      @media (min-width: $tablet-width) {
+        @include size (168px, 200px);
       }
     }
   }

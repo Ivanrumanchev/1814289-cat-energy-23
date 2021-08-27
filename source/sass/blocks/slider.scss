@@ -84,7 +84,7 @@
 
   @media (min-width: $tablet-width) {
     img {
-      @include size (708px, 553px);
+      @include size (auto, 553px);
     }
   }
 }

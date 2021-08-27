@@ -101,6 +101,7 @@
 }
 
 .extra__gift {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -112,28 +113,35 @@
 
   background: $background url("../img/bg_extra__gift.png") no-repeat center center;
   background-size: cover;
-  position: relative;
+
+  @media (min-resolution: 2dppx) {
+    background: $background url("../img/bg_extra__gift@2x.png") no-repeat center center;
+    background-size: cover;
+  }
 
   color: $main_theme_color;
 
   @include size (100%, 289px);
   @include font ($secondary-main-size, ceil(1.25 * $secondary-main-size), 400, $text_font);
 
-  @media (min-width: $tablet-width) {
-    position: relative;
-    z-index: 2;
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 59.6%;
 
+    padding-left: 59.6%;
     padding-bottom: 0;
 
     margin-top: 69px;
     margin-bottom: 76px;
 
     background: $background url("../img/bg_extra__gift-tablet.png") no-repeat center center;
-    background-size: 707px 200px;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: $background url("../img/bg_extra__gift-tablet@2x.png") no-repeat center center;
+      background-size: cover;
+    }
 
     @include size (100%, 200px);
   }
@@ -146,9 +154,6 @@
     justify-content: flex-end;
     align-items: center;
     padding-bottom: 42px;
-
-    background: $background url("../img/bg_extra__gift.png") no-repeat center center;
-    background-size: cover;
 
     @include size (100%, 100%);
   }
