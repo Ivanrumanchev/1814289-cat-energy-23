@@ -1,5 +1,5 @@
 .catalog-item {
-  padding-top: 19px;
+  padding-top: 20px;
   padding-bottom: 25px;
   box-sizing: border-box;
 
@@ -20,23 +20,20 @@
   }
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 430px;
+    min-height: 426px;
     padding-top: 161px;
     padding-bottom: 39px;
-    padding-left: 39px;
+    padding-left: 38px;
     padding-right: 37px;
 
     background-color: $background_special;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 162px;
+    padding-top: 163px;
     padding-bottom: 40px;
     padding-right: 38px;
+    padding-left: 38px;
   }
 }
 
@@ -57,11 +54,23 @@
   @include font ($secondary-main-size, ceil(1.25 * $secondary-main-size));
 
   @media (min-width: $tablet-width) {
-    margin: 0;
-    width: 145px;
+    margin: 0 auto;
+    width: auto;
     text-align: center;
+    display: block;
 
-    @include font ($title-size-smaller, ceil(1.2 * $secondary-main-size));
+    @include font ($title-size-smaller, ceil(1.2 * $title-size-smaller));
+
+    & span {
+      display: block;
+      padding-left: 5px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 5px;
+
+    @include font ($title-size-smaller, ceil(1.05 * $title-size-smaller));
   }
 }
 
@@ -89,6 +98,8 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    margin-top: (21px - 8);
+    margin-bottom: 33px;
     min-width: 169px;
     width: 100%;
 
@@ -99,15 +110,24 @@
     }
 
     td {
-      padding-top: 7px;
-      padding-bottom: 9px;
+      padding-top: 8px;
+      padding-bottom: 7px;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 17px;
+    padding-left: 3px;
   }
 }
 
 .catalog-item__button {
   width: 100%;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 1px;
+  }
 }
 
 .catalog-item__plus {
@@ -115,18 +135,20 @@
   margin: 0 auto;
   margin-bottom: 23px;
 
-  font-size: 0.01px;
-  color: $main_theme_color;
-  background: url("../img/plus.svg") no-repeat;
-  background-size: 30px 30px;
-
   @include size (30px);
 
+  & svg {
+    @include size (30px);
+  }
+
   @media (min-width: $tablet-width) {
-    margin-bottom: 49px;
-    background-size: 60px 60px;
+    margin-bottom: 48px;
 
     @include size (60px);
+
+    & svg {
+      @include size (60px);
+    }
   }
 }
 
@@ -138,8 +160,11 @@
   @include font ($main-size-small, ceil(1.33 * $main-size-small), 400, $text_font);
 
   @media (min-width: $tablet-width) {
-    margin-top: 23px;
-    margin-bottom: 87px;
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 86px;
+    margin-left: auto;
+    margin-right: auto;
     width: 167px;
 
     @include font ($secondary-main-size, ceil(1.12 * $secondary-main-size), 400, $text_font);

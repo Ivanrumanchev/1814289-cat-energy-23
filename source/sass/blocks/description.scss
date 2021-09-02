@@ -29,7 +29,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 1220px;
+    padding-top: 71px;
+    width: 1228px;
+    padding-left: 4px;
 
     &::after {
       content: none;
@@ -76,9 +78,9 @@
     padding-left: 0;
     width: 249px;
     height: 280px;
-    padding-right: 74px;
+    padding-right: 75px;
 
-    @include font ($secondary-main-size, ceil(1.5 * $main-size), 400, $text_font);
+    @include font ($secondary-main-size, ceil(1.5 * $secondary-main-size), 400, $text_font);
 
     &:nth-of-type(2n + 1) {
       margin-bottom: 37px;
@@ -91,7 +93,7 @@
     &::after {
       content: "1";
       position: absolute;
-      top: 0%;
+      top: 1px;
       left: 118px;
       color: $background_special;
 
@@ -100,6 +102,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-right: 74px;
+
     &:nth-of-type(4n) {
       padding-right: 0;
     }
@@ -110,83 +114,159 @@
   }
 
   &--health {
-    background: url("../img/bg_description__item--health.svg") no-repeat;
-
     @media (max-width: $mobile-width-only) {
-      margin-bottom: 26px;
+      margin-bottom: 20px;
+      background: url("../img/bg_description__item--health.png") no-repeat;
       background-size: 60px 60px;
+
+      @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background: url("../img/bg_description__item--health@2x.png") no-repeat;
+        background-size: 60px 60px;
+      }
     }
 
     @media (min-width: $tablet-width) {
+      background: url("../img/bg_description__item--health_tablet.png") no-repeat;
       background-position-y: 40px;
       background-size: 80px 80px;
+
+      @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background: url("../img/bg_description__item--health_tablet@2x.png") no-repeat;
+        background-position-y: 40px;
+        background-size: 80px 80px;
+      }
     }
   }
 
   &--fast {
-    background: url("../img/bg_description__item--fast.svg") no-repeat;
-
     @media (max-width: $mobile-width-only) {
-      margin-bottom: 26px;
+      margin-bottom: 20px;
+      background: url("../img/bg_description__item--fast.png") no-repeat;
       background-size: 60px 60px;
+
+      @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background: url("../img/bg_description__item--fast@2x.png") no-repeat;
+        background-size: 60px 60px;
+      }
     }
 
     @media (min-width: $tablet-width) {
+      background: url("../img/bg_description__item--fast_tablet.png") no-repeat;
       background-position-y: 40px;
       background-size: 80px 80px;
+
+      @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background: url("../img/bg_description__item--fast_tablet@2x.png") no-repeat;
+        background-position-y: 40px;
+        background-size: 80px 80px;
+      }
 
       &::after {
         content: "2";
         left: 111px;
       }
+
+      //pixel-perfect
+      & .description__text {
+        margin-left: -1px;
+      }
     }
   }
 
   &--change {
-    background: url("../img/bg_description__item--change.svg") no-repeat;
-
     @media (max-width: $mobile-width-only) {
-      margin-bottom: 26px;
+      margin-bottom: 20px;
+      background: url("../img/bg_description__item--change.png") no-repeat;
       background-size: 60px 60px;
+
+      @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background: url("../img/bg_description__item--change@2x.png") no-repeat;
+        background-size: 60px 60px;
+      }
     }
 
     @media (min-width: $tablet-width) {
+      background: url("../img/bg_description__item--change_tablet.png") no-repeat;
       background-position-y: 40px;
       background-size: 80px 80px;
+
+      @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background: url("../img/bg_description__item--change_tablet@2x.png") no-repeat;
+        background-position-y: 40px;
+        background-size: 80px 80px;
+      }
 
       &::after {
         content: "3";
         left: 113px;
       }
     }
+
+    //pixel-perfect
+    @media (min-width: $desktop-width) {
+      & .description__text {
+        margin-left: -1px;
+      }
+    }
   }
 
   &--result {
-    background: url("../img/bg_description__item--result.svg") no-repeat;
-
     @media (max-width: $mobile-width-only) {
+      background: url("../img/bg_description__item--result.png") no-repeat;
       background-size: 60px 60px;
+
+      @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background: url("../img/bg_description__item--result@2x.png") no-repeat;
+        background-size: 60px 60px;
+      }
     }
 
     @media (min-width: $tablet-width) {
+      background: url("../img/bg_description__item--result_tablet.png") no-repeat;
       background-position-y: 40px;
       background-size: 80px 80px;
+
+      @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background: url("../img/bg_description__item--result_tablet@2x.png") no-repeat;
+        background-position-y: 40px;
+        background-size: 80px 80px;
+      }
 
       &::after {
         content: "4";
         left: 113px;
       }
     }
+
+    //pixel-perfect
+    @media (min-width: $desktop-width) {
+      & .description__text {
+        margin-left: -1px;
+      }
+    }
   }
 }
 
 .description__text {
+  padding-top: 2px;
   position: relative;
   z-index: 2;
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    padding-top: 151px;
+    padding-top: 152px;
     width: 245px;
+
+    & span {
+      display: block;
+    }
   }
 }

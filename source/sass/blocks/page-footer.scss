@@ -18,17 +18,18 @@
     min-width: 708px;
     width: 92.2%;
     flex-direction: row;
-    padding-top: 54px;
+    padding-top: (54px - 6);
     padding-bottom: 62px;
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 51px;
     width: 1220px;
   }
 }
 
 .page-footer__logo-text {
-  padding-bottom: 31px;
+  padding-bottom: 30px;
   width: 100%;
   text-align: center;
   border-bottom: 1px solid $target_border_color;
@@ -36,7 +37,7 @@
   @media (min-width: $tablet-width) {
     text-align: left;
     padding-bottom: 0;
-    padding-top: 6px;
+    padding-top: 5px;
     border-bottom: none;
   }
 
@@ -47,19 +48,30 @@
   &:active {
     opacity: 0.6;
   }
+
+  &--index {
+    &:hover {
+      opacity: 1;
+      cursor: auto;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
 }
 
 .page-footer__social {
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   width: 100%;
   text-align: center;
   border-bottom: 1px solid $target_border_color;
 
   @media (min-width: $tablet-width) {
     border-bottom: none;
-    padding-bottom: 0;
-    padding-top: 7px;
+    padding: 0;
+    // padding-top: 7px;
   }
 }
 
@@ -67,10 +79,12 @@
   padding-top: 22px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 0;
+    padding-top: 1px;
+    padding-right: 1px;
   }
 
-  &:active {
-    opacity: 0.6;
+  @media (min-width: $desktop-width) {
+    padding-top: 5px;
+    padding-right: 0;
   }
 }

@@ -10,38 +10,109 @@
   }
 }
 
-.label--mail {
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 17px;
-    transform: translate(0, -50%);
-    background: url("../img/email.svg") no-repeat;
-    background-size: 18px 13px;
+//pixel perfect
+.form__features .label {
+  margin-right: 13px;
+  padding-bottom: 1px;
 
-    @include size(18px, 13px);
+  @media (min-width: $tablet-width) {
+    margin-right: 16px;
+    padding-bottom: 2px;
+    padding-left: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 1px;
+  }
+
+  &--weight {
+    margin-right: 16px;
 
     @media (min-width: $tablet-width) {
-      right: 19px;
+      margin-right: 19px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 20px;
+    }
+  }
+
+  &--age {
+    margin-right: 15px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 16px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 17px;
     }
   }
 }
 
-.label--phone {
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 13px;
-    transform: translate(0, -50%);
-    background: url("../img/phone.svg") no-repeat;
-    background-size: 20px 20px;
+.form__contacts-person .label {
+  padding-bottom: 2px;
 
-    @include size(20px, 20px);
+  &--mail {
+    margin-right: 11px;
 
     @media (min-width: $tablet-width) {
-      right: 17px;
+      padding-left: 3px;
+      margin-right: 18px;
     }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 1px;
+      margin-right: 21px;
+    }
+  }
+
+  &--phone {
+    margin-right: 9px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: -2px;
+      margin-right: 17px;
+    }
+  }
+}
+//
+
+.label--mail svg {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translate(0, -50%);
+
+  @include size(19px, 14px);
+
+  @media (min-width: $tablet-width) {
+    right: 19px;
+    padding-bottom: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 2px;
+  }
+}
+
+.label--phone svg {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  transform: translate(0, -50%);
+
+  @include size(20px, 20px);
+
+  @media (min-width: $tablet-width) {
+    right: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 2px;
   }
 }

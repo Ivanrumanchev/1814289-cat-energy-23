@@ -35,7 +35,17 @@
 .targets__item {
   position: relative;
   padding: 18px;
+  padding-bottom: 22px;
   background-color: $background_special;
+
+  @media (min-width: $tablet-width) {
+    padding: 52px;
+    padding-bottom: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 59px;
+  }
 
   &::before {
     @media (max-width: $mobile-width-only) {
@@ -51,40 +61,71 @@
     }
   }
 
-  @media (min-width: $tablet-width) {
-    padding: 52px;
-  }
-
-  &--slim {
+  &:first-child {
     margin-bottom: 20px;
-    background: $background_special url("../img/bg_cat-slim.svg") no-repeat 22px 21px;
-    background-size: 50px 53px;
+    // background: $background_special url("../img/bg_cat-slim.svg") no-repeat 22px 21px;
+    // background-size: 50px 53px;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 30px;
-      background-position: right 62px center;
-      background-size: 200px 211px;
+      // background-position: right 62px center;
+      // background-size: 200px 211px;
     }
 
     @media (min-width: $desktop-width) {
       margin-bottom: 0;
-      background-position: 52px 41px;
-      background-size: 100px 106px;
+      // background-position: 52px 41px;
+      // background-size: 100px 106px;
     }
   }
+}
 
-  &--fat {
-    background: $background_special url("../img/bg_cat-fat.svg") no-repeat 13px 24px;
-    background-size: 67px 50px;
+.targets__picture {
+  position: absolute;
+
+  &--slim {
+    top: 21px;
+    left: 22px;
+
+    @include size (50px, 53px);
 
     @media (min-width: $tablet-width) {
-      background-position: right 28px top 91px;
-      background-size: 268px 200px;
+      left: auto;
+      top: auto;
+      bottom: 80px;
+      right: 62px;
+
+      @include size (200px, 211px);
     }
 
     @media (min-width: $desktop-width) {
-      background-position: 33px 47px;
-      background-size: 134px 100px;
+      top: 41px;
+      left: 52px;
+
+      @include size (100px, 106px);
+    }
+  }
+
+  &--pro {
+    top: 24px;
+    left: 13px;
+
+    @include size (67px, 50px);
+
+    @media (min-width: $tablet-width) {
+      left: auto;
+      top: auto;
+      bottom: 81px;
+      right: 28px;
+
+      @include size (268px, 200px);
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 47px;
+      left: 33px;
+
+      @include size (134px, 100px);
     }
   }
 }
@@ -122,17 +163,17 @@
   @include font ($main-size, ceil(1.28 * $main-size), 400, $text_font);
 
   @media (min-width: $tablet-width) {
-    margin-top: 24px;
+    margin-top: 25px;
     margin-left: 0;
     margin-right: 264px;
-    margin-bottom: 52px;
+    margin-bottom: 51px;
 
     @include font ($secondary-main-size, ceil(1.5 * $secondary-main-size), 400, $text_font);
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 73px;
-    margin-bottom: 27px;
+    margin-top: 74px;
+    margin-bottom: 26px;
     margin-right: 0;
   }
 }
@@ -160,35 +201,46 @@
     margin-bottom: 7px;
   }
 
-  &::after {
+  & svg {
     content: "";
     position: absolute;
-    left: 100px;
+    left: 102px;
     top: 50%;
     transform: translate(0, -50%);
 
-    background: url("../img/arrow.svg") no-repeat;
-    background-size: 24px 12px;
-
-    @include size (32px, 12px);
+    @include size (24px, 12px);
 
     @media (min-width: $tablet-width) {
       left: 133px;
     }
+
+    @media (min-width: $desktop-width) {
+      left: 136px;
+    }
   }
 
-  &:hover {
-    &::after {
-      background-size: 32px 12px;
-      transition: 0.3s;
-    }
+  &:hover svg {
+    transition: 0.3s;
+
+    @include size (32px, 12px);
   }
 
   &:active {
     opacity: 0.3;
+  }
 
-    &::after {
-      background-size: 32px 12px;
+  //pixel perfect
+  &--pro {
+    & svg {
+      left: 100px;
+
+      @media (min-width: $tablet-width) {
+        left: 129px;
+      }
+
+      @media (min-width: $desktop-width) {
+        left: 130px;
+      }
     }
   }
 }
