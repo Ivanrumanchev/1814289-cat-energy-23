@@ -7,22 +7,7 @@
   box-sizing: border-box;
   min-width: 280px;
   width: 87.5%;
-  padding-top: (36px + $title-size);
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 17px;
-    left: 0%;
-
-    background-color: $background;
-
-    @include size (100%, 2px);
-
-    @media (min-width: $tablet-width) {
-      top: 24px;
-    }
-  }
+  padding-top: (35px + $title-size);
 
   @media (min-width: $tablet-width) {
     min-width: 708px;
@@ -32,11 +17,30 @@
 
   @media (min-width: $desktop-width) {
     width: 1220px;
-    padding-top: (81px + $secondary-title-size);
+    padding-top: (80px + $secondary-title-size);
     padding-bottom: 86px;
     display: grid;
     grid-template-columns: 895px 245px;
     grid-column-gap: 80px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0%;
+
+    background-color: $background;
+
+    @include size (100%, 2px);
+
+    @media (min-width: $tablet-width) {
+      top: 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 23px;
+    }
   }
 }
 
@@ -54,8 +58,9 @@
   @include font ($title-size);
 
   @media (min-width: $tablet-width) {
-    left: 3.9%;
+    left: 4%;
     padding-left: 4.8%;
+    padding-right: 36px;
 
     @include font ($secondary-title-size);
   }
@@ -91,8 +96,8 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-left: 38px;
-    padding-right: 38px;
+    padding-left: 37px;
+    padding-right: 37px;
   }
 
   @media (min-width: $desktop-width) {
@@ -106,25 +111,26 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  padding-bottom: 43px;
+  padding-bottom: 42px;
 
   margin: 35px 0;
   box-sizing: border-box;
 
-  background: $background url("../img/bg_extra__gift.png") no-repeat center center;
+  background: $background url("../img/bg_extra__gift.jpg") no-repeat center center;
   background-size: cover;
 
-  @media (min-resolution: 2dppx) {
-    background: $background url("../img/bg_extra__gift@2x.png") no-repeat center center;
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    background: $background url("../img/bg_extra__gift@2x.jpg") no-repeat center center;
     background-size: cover;
   }
 
   color: $main_theme_color;
 
-  @include size (100%, 289px);
+  @include size (100%, 290px);
   @include font ($secondary-main-size, ceil(1.25 * $secondary-main-size), 400, $text_font);
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (min-width: $tablet-width) and (max-width: ($desktop-width - 1)) {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -135,11 +141,12 @@
     margin-top: 69px;
     margin-bottom: 76px;
 
-    background: $background url("../img/bg_extra__gift-tablet.png") no-repeat center center;
+    background: $background url("../img/bg_extra__gift-tablet.jpg") no-repeat center center;
     background-size: cover;
 
-    @media (min-resolution: 2dppx) {
-      background: $background url("../img/bg_extra__gift-tablet@2x.png") no-repeat center center;
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+      background: $background url("../img/bg_extra__gift-tablet@2x.jpg") no-repeat center center;
       background-size: cover;
     }
 
@@ -154,20 +161,17 @@
     justify-content: flex-end;
     align-items: center;
     padding-bottom: 42px;
+    background-position-x: right;
 
     @include size (100%, 100%);
   }
 
-  &::after {
+  & svg {
     z-index: 4;
-    content: "";
     position: absolute;
     top: 58px;
     left: 50%;
     transform: translate(-50%, 0);
-
-    background: url("../img/bg_icon_gift.svg") no-repeat;
-    background-size: 78px 80px;
 
     @include size (78px, 80px);
 
@@ -175,14 +179,13 @@
       top: 57px;
       left: 10.9%;
       transform: translate(0, 0);
-      background-size: 80px 82px;
 
       @include size (80px, 82px);
     }
 
     @media (min-width: $desktop-width) {
-      top: 55px;
-      left: 50%;
+      top: 56px;
+      left: 50.5%;
       transform: translate(-50%, 0);
     }
   }

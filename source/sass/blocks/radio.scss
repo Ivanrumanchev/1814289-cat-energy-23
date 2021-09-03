@@ -5,7 +5,7 @@
 
   @media (min-width: $tablet-width) {
     height: 100%;
-    padding: 30px 28px;
+    padding: 29px 27px;
 
     border: 1px solid $form-border-color;
 
@@ -18,7 +18,7 @@
 .radio__label {
   position: relative;
   display: inline-block;
-  padding-left: 45px;
+  padding-left: 46px;
 
   color: $special_2_color;
 
@@ -27,7 +27,11 @@
   }
 
   &:not(:last-child) {
-    padding-bottom: 23px;
+    padding-bottom: 25px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 23px;
+    }
   }
 
   &::before {

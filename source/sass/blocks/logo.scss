@@ -1,0 +1,35 @@
+.logo {
+  @media (max-width: $mobile-width-only) {
+    @include size (33px, 37px);
+  }
+}
+
+.logo__cat-small {
+  display: none;
+
+  @media (max-width: $mobile-width-only) {
+    display: block;
+
+    @include size (33px, 37px);
+  }
+}
+
+.logo__cat-big {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: ($desktop-width - 1)) {
+    @include size (174px, 52px);
+  }
+}
+
+.logo__sunrays {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}

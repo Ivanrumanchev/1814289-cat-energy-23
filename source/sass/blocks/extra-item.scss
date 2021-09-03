@@ -7,7 +7,7 @@
   grid-template-columns: 1fr 1fr;
   width: 100%;
   padding-top: 13px;
-  padding-bottom: 19px;
+  padding-bottom: 18px;
 
   @media (min-width: $tablet-width) {
     grid-template-areas:
@@ -16,7 +16,7 @@
     grid-template-columns: 1fr 1fr 1fr 14.7%;
 
     padding-top: 26px;
-    padding-bottom: 28px;
+    padding-bottom: 27px;
   }
 
   @media (min-width: $desktop-width) {
@@ -25,20 +25,22 @@
     grid-column-gap: 38px;
 
     padding-top: 15px;
-    padding-bottom: 17px;
+    padding-bottom: 16px;
   }
 }
 
 .extra-item__name {
   grid-area: name;
   padding-bottom: 13px;
+  padding-left: 1px;
   text-transform: uppercase;
   color: $special_2_color;
 
   @include font ($secondary-main-size);
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 22px;
+    margin-top: 0;
+    padding-bottom: 25px;
 
     @include font ($title-size-smaller);
   }
@@ -56,6 +58,8 @@
   @include font ($main-size, $main-size, 400, $text_font);
 
   @media (min-width: $tablet-width) {
+    padding-top: 3px;
+
     @include font ($secondary-main-size, ceil(1.25 * $secondary-main-size), 400, $text_font);
   }
 }
@@ -71,7 +75,8 @@
 
   @media (min-width: $desktop-width) {
     text-align: left;
-    padding-top: (28px - 15);
+    padding-top: (28px - 14);
+    margin-left: -3px;
   }
 }
 

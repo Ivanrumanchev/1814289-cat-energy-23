@@ -22,8 +22,8 @@
 
 .result__legend {
   position: absolute;
-  bottom: -12px;
-  left: 50%;
+  bottom: -16px;
+  left: 49%;
   transform: translate(-50%, 0);
   text-align: center;
   width: 77px;
@@ -36,7 +36,8 @@
   @include font ($main-size-small, $main-size-small, 400, $text_font);
 
   @media (min-width: $tablet-width) {
-    bottom: -7px;
+    bottom: -6px;
+    left: 50%;
     width: max-content;
     padding: 0 8px;
 
@@ -46,17 +47,21 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-color: $example_background;
+    left: 49.5%;
+    background-color: $background_special;
   }
 }
 
 .result__text {
+  padding-bottom: 2px;
   text-transform: uppercase;
   margin: 0;
 
   @include font ($title-size);
 
   @media (min-width: $tablet-width) {
+    padding-bottom: 4px;
+
     @include font ($result-numbers-size, ceil(1.23 * $main-size));
   }
 }

@@ -21,7 +21,7 @@
   @media (min-width: $tablet-width) {
     min-width: 626px;
     width: 81.5%;
-    padding-top: 62px;
+    padding-top: 63px;
     padding-bottom: 51px;
   }
 
@@ -31,8 +31,9 @@
     left: 110px;
     top: 95px;
     padding-left: 76px;
-    padding-right: 89px;
+    padding-right: 84px;
 
+    min-width: 570px;
     width: 570px;
     min-height: 201px;
 
@@ -46,13 +47,21 @@
 
   text-transform: uppercase;
 
-  @include font ($secondary-main-size, ceil(1.12 * $secondary-main-size));
+  @include font ($secondary-main-size, ceil(1.25 * $secondary-main-size));
 
   @media (min-width: $tablet-width) {
     width: 171px;
-    margin-top: 4px;
+    margin-top: 5px;
 
     @include font ($title-size-smaller);
+  }
+
+  & span {
+    display: block;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 5px;
+    }
   }
 }
 
@@ -60,6 +69,7 @@
   margin: 0;
   width: 140px;
   text-align: left;
+  padding-left: 3px;
 
   color: $special_1_color;
 
@@ -68,15 +78,21 @@
   @media (min-width: $tablet-width) {
     width: 159px;
     margin-bottom: 7px;
+    padding-right: 1px;
     text-align: right;
 
     @include font ($secondary-main-size, ceil(1.25 * $secondary-main-size), 400, $text_font);
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
   }
 }
 
 .location__sity {
   @media (min-width: $tablet-width) {
-    margin-top: 19px;
+    margin-top: 20px;
+    text-align: right;
     display: inline-block;
   }
 }
@@ -86,11 +102,9 @@
   margin: 0 auto;
   overflow-x: hidden;
 
-  & iframe {
-    width: 100%;
+  @include size (100%, 362px);
 
-    @media (min-width: $tablet-width) {
-      height: 400px;
-    }
+  @media (min-width: $tablet-width) {
+    height: 400px;
   }
 }

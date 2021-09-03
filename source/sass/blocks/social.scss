@@ -4,47 +4,103 @@
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-left: -2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .social__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
 
   @include size (44px, 44px);
+
+  @media (min-width: $tablet-width) {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
 }
 
 .social__link {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 0.01px;
 
   @include size (44px, 44px);
 
 
   &--vk {
-    background: url("../img/vk_social.svg") no-repeat center center;
-    background-size: 23px 16px;
-
     @media (min-width: $tablet-width) {
-      background-size: 30px 22px;
+      margin-left: -2px;
+    }
+
+    & svg {
+      padding-bottom: 2px;
+      padding-right: 2px;
+      fill: $icon_color;
+
+      @include size (23px, 13px);
+
+      @media (min-width: $tablet-width) {
+        @include size (29px, 17px);
+      }
+    }
+
+    &:hover svg {
+      fill: $background;
     }
   }
 
   &--inst {
-    background: url("../img/inst_social.svg") no-repeat center center;
-    background-size: 16px 16px;
+    & svg {
+      fill: $icon_color;
 
-    @media (min-width: $tablet-width) {
-      background-size: 23px 23px;
+      @include size (16px, 16px);
+
+      @media (min-width: $tablet-width) {
+        @include size (23px, 23px);
+      }
+    }
+
+    &:hover svg {
+      fill: $background;
     }
   }
 
   &--fb {
-    background: url("../img/fb_social.svg") no-repeat center center;
-    background-size: 22px 22px;
-
     @media (min-width: $tablet-width) {
-      background-size: 28px 33px;
+      margin-left: -1px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-left: -2px;
+    }
+
+    & svg {
+      padding-bottom: 2px;
+      padding-right: 3px;
+      fill: none;
+      stroke: $icon_color;
+
+      @include size (12px, 19px);
+
+      @media (min-width: $tablet-width) {
+        @include size (15px, 29px);
+      }
+    }
+
+    &:hover svg {
+      stroke: $background;
+    }
+  }
+
+  &:active svg {
+    opacity: 0.3;
   }
 }

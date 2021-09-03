@@ -60,10 +60,9 @@
   box-sizing: border-box;
   padding-top: 10px;
   padding-left: 20px;
-  height: 50px;
   cursor: pointer;
 
-  @include size (50px, 50px);
+  @include size (60px, 50px);
 
   @media (min-width: $tablet-width) {
     display: block;
@@ -99,17 +98,17 @@
     }
   }
 
-  img {
-    @include size (33.3px, 37.6px);
+  // img {
+  //   @include size (33.3px, 37.6px);
 
-    @media (min-width: $tablet-width) {
-      @include size (174px, 52px);
-    }
+  //   @media (min-width: $tablet-width) {
+  //     @include size (174px, 52px);
+  //   }
 
-    @media (min-width: $desktop-width) {
-      @include size (202px, 59px);
-    }
-  }
+  //   @media (min-width: $desktop-width) {
+  //     @include size (202px, 59px);
+  //   }
+  // }
 }
 
 .page-header__logo-text {
@@ -142,7 +141,7 @@
     }
   }
 
-  img {
-    @include size (101px, 18px);
-  }
+  // img {
+  //   @include size (101px, 18px);
+  // }
 }

@@ -8,20 +8,33 @@
     text-align: right;
     background-size: 23px 23px;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__text {
-  margin-top: 6px;
+  margin-top: 7px;
+  margin-left: -1px;
   color: $special_1_color;
   text-decoration: none;
 
   @include font ($secondary-main-size, (1.15 * $secondary-main-size), 400, $text_font);
 
   @media (min-width: $tablet-width) {
-    margin-right: 22px;
+    margin-right: 23px;
   }
 }
 
 .copyright__logo {
   @include size (27px, 34px);
+
+  & svg {
+    fill: $icon_color;
+
+    &:hover {
+      fill: $background;
+    }
+  }
 }

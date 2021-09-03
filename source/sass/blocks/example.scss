@@ -16,6 +16,12 @@
       background-color: $example_background;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      background-color: $background_special;
+    }
+  }
 }
 
 .example__wrapper {
@@ -26,7 +32,7 @@
   min-width: 280px;
   width: 87.5%;
   padding-top: 27px;
-  padding-bottom: 31px;
+  padding-bottom: 36px;
 
   @media (min-width: $tablet-width) {
     min-width: 708px;
@@ -49,13 +55,13 @@
   @include font ($secondary-title-size, ceil(1.11 * $secondary-title-size));
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 63px;
+    margin-bottom: 64px;
 
     @include font ($big-title-size);
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 146px;
+    margin-bottom: 147px;
   }
 }
 
@@ -68,13 +74,14 @@
   @include font ($main-size, ceil(1.28 * $main-size), 400, $text_font);
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 54px;
+    margin-bottom: 53px;
+    padding-right: 10px;
 
-    @include font ($secondary-main-size, ceil(1.5 * $main-size), 400, $text_font);
+    @include font ($secondary-main-size, ceil(1.5 * $secondary-main-size), 400, $text_font);
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 69px;
+    margin-bottom: 68px;
     width: 436px;
     text-align: left;
   }
@@ -117,7 +124,7 @@
 
 .example__cost {
   margin: 0;
-  margin-bottom: 42px;
+  margin-bottom: 33px;
 
   text-align: center;
   text-transform: uppercase;
@@ -126,6 +133,8 @@
 
   @media (min-width: $tablet-width) {
     text-align: right;
+    padding-top: 11px;
+    padding-right: 1px;
     margin-bottom: 0;
 
     & span {
@@ -140,11 +149,13 @@
     text-align: left;
     width: 436px;
     margin-bottom: 0;
+    padding-top: 0;
+    padding-right: 0;
 
     & span {
       display: inline-block;
       margin-top: 0;
-      margin-left: 63px;
+      margin-left: 59px;
     }
   }
 }
@@ -160,15 +171,26 @@
 
   @media (min-width: $desktop-width) {
     bottom: 75px;
-    right: 0;
+    left: 580px;
     width: 708px;
     transform: translate(0, 0);
   }
 }
 
+.example__cat-img {
+  @include size (auto, 241px);
+  padding-right: 6px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 0;
+  }
+}
+
 .example__toggles {
   margin: 0 auto;
-  min-width: 210px;
+  margin-top: 31px;
+  padding-left: 5px;
+  min-width: 197px;
   max-width: 570px;
   width: 65%;
   display: flex;
@@ -177,6 +199,7 @@
   @media (min-width: $tablet-width) {
     min-width: 570px;
     margin: 0 auto;
+    padding-left: 0;
   }
 }
 
