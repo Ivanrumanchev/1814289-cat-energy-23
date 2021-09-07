@@ -88,6 +88,8 @@
   right: 15px;
   transform: translate(0, -50%);
 
+  fill: none;
+
   @include size(19px, 14px);
 
   @media (min-width: $tablet-width) {
