@@ -8,7 +8,7 @@ const htmlmin = require('gulp-htmlmin');
 const csso = require('postcss-csso');
 const rename = require('gulp-rename');
 const terser = require('gulp-terser');
-const squoosh = require('gulp-libsquoosh');
+const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require('del');
@@ -60,15 +60,21 @@ exports.scripts = scripts;
 // Images
 
 const optimizeImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
-    .pipe(squoosh())
-    .pipe(gulp.dest("build/img"));
+  return gulp.src(["source/img/**/*.{png,jpg,svg}",
+  "!source/img/svg_for_sprite/*.svg"])
+  .pipe(imagemin([
+    imagemin.mozjpeg({quality: 75, progressive: true}),
+    imagemin.optipng({optimizationLevel: 5}),
+    imagemin.svgo()
+  ]))
+  .pipe(gulp.dest("build/img"));
 }
 
 exports.optimizeImages = optimizeImages;
 
 const copyImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src(["source/img/**/*.{png,jpg,svg}",
+  "!source/img/svg_for_sprite/*.svg"])
     .pipe(gulp.dest("build/img"));
 }
 
@@ -103,8 +109,8 @@ const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
-    "source/img/**/*.svg",
-    "!source/img/svg_for_sprite/*.svg",
+    // "source/img/**/*.svg",
+    // "!source/img/svg_for_sprite/*.svg",
   ], {
     base: "source"
   })
