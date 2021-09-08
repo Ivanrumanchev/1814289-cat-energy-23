@@ -163,14 +163,14 @@
 .example__slider {
   @media (min-width: $tablet-width) {
     position: absolute;
-    bottom: 69px;
+    bottom: 67px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 100%;
   }
 
   @media (min-width: $desktop-width) {
-    bottom: 75px;
+    bottom: 67px;
     left: 580px;
     width: 708px;
     transform: translate(0, 0);
@@ -200,6 +200,11 @@
     min-width: 570px;
     margin: 0 auto;
     padding-left: 0;
+    padding-right: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
   }
 }
 
