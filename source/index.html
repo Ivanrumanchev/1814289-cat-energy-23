@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Кошка, корм, домашнее животное, здоровое питание">
+    <meta name="description" content="Кэт энерджи - лучший корм для кошек. Ваша кошка скажет вам довольное мяу">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=9872cb91-1fce-48f6-9694-13ea58eb6e30" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=9872cb91-1fce-48f6-9694-13ea58eb6e30"></script>
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -71,7 +74,7 @@
             </div>
           </a>
           <a class="page-header__logo-text page-header__logo-text--index">
-            <svg width="101" height="18">
+            <svg width="101" height="18" role="img" aria-label="Кэт энерджи">
               <use xlink:href="img/sprite.svg#logo-text"></use>
             </svg>
           </a>
@@ -81,7 +84,7 @@
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <div class="main-nav__wrapper">
-            <ul class="main-nav__list">
+            <ul class="main-nav__list main-nav__list--index">
               <li class="main-nav__item main-nav__item-index main-nav__item--active main-nav__item--active-index">
                 <a>Главная</a>
               </li>
@@ -123,7 +126,7 @@
           <h2 class="visually-hidden">Ваши цели</h2>
           <ul class="targets__list">
             <li class="targets__item">
-              <svg class="targets__picture targets__picture--slim" width="50" height="53">
+              <svg class="targets__picture targets__picture--slim" width="50" height="53" role="img" aria-label="Худой элегантный кот">
                 <use xlink:href="img/sprite.svg#bg_cat-slim"></use>
               </svg>
               <h3 class="targets__title">Похудение</h3>
@@ -133,13 +136,13 @@
                 вашему питомцу сбросить лишний вес.
               </p>
               <a class="targets__to-catalog targets__to-catalog--slim" href="catalog.html#slim">Каталог SLIM
-                <svg width="24" height="12">
+                <svg width="24" height="12" role="img" aria-label="Стрелка">
                   <use xlink:href="img/sprite.svg#arrow"></use>
                 </svg>
               </a>
             </li>
             <li class="targets__item targets__item--fat">
-              <svg class="targets__picture targets__picture--pro" width="67" height="50">
+              <svg class="targets__picture targets__picture--pro" width="67" height="50" role="img" aria-label="Здоровый толстый кот">
                 <use xlink:href="img/sprite.svg#bg_cat-pro"></use>
               </svg>
               <h3 class="targets__title">Набор массы</h3>
@@ -149,7 +152,7 @@
                 необходимые мышцы!
               </p>
               <a class="targets__to-catalog targets__to-catalog--pro" href="catalog.html#fat">Каталог PRO
-                <svg width="24" height="12">
+                <svg width="24" height="12" role="img" aria-label="Стрелка">
                   <use xlink:href="img/sprite.svg#arrow"></use>
                 </svg>
               </a>
@@ -214,7 +217,7 @@
             </ul>
             <p class="example__toggles slider__toggles">
               <button class="slider__toggle slider__toggle--check slider__toggle--before" type ="button">Было</button>
-              <input class="slider__range" type="range" min="0" max="100" value="50" step="1" oninput="sliderRange()">
+              <input class="slider__range" type="range" min="0" max="100" value="50" step="1" oninput="sliderRange()" aria-label="Ползунок изменения до/после">
               <button class="slider__toggle slider__toggle--after slider__toggle--after--checked" type ="button">Стало</button>
             </p>
           </div>
@@ -239,7 +242,7 @@
       <div class="page-footer__wrapper">
         <div class="page-footer__logo-text page-footer__logo-text--index">
           <a>
-            <svg width="128" height="24">
+            <svg width="128" height="24" role="img" aria-label="Кэт энерджи">
               <use xlink:href="img/sprite.svg#logo-text"></use>
             </svg>
           </a>
@@ -248,7 +251,7 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
-                <svg width="23" height="13">
+                <svg width="23" height="13" role="img" aria-label="Ссылка VK">
                   <use xlink:href="img/sprite.svg#vk"></use>
                 </svg>
                 VK
@@ -256,7 +259,7 @@
             </li>
             <li class="social__item">
               <a class="social__link social__link--inst" href="https://www.instagram.com/htmlacademy">
-                <svg width="16" height="16">
+                <svg width="16" height="16" role="img" aria-label="Ссылка Instagram">
                   <use xlink:href="img/sprite.svg#inst"></use>
                 </svg>
                 Instagram
@@ -264,7 +267,7 @@
             </li>
             <li class="social__item">
               <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">
-                <svg width="13" height="20">
+                <svg width="13" height="20" role="img" aria-label="Ссылка Facebook">
                   <use xlink:href="img/sprite.svg#fb"></use>
                 </svg>
                 FB
@@ -274,8 +277,8 @@
         </div>
         <div class="page-footer__copyright copyright">
           <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg width="27" height="34">
+          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" >
+            <svg width="27" height="34" role="img" aria-label="Логотип HTML Academy">
               <use xlink:href="img/sprite.svg#htmlacademy"></use>
             </svg>
           </a>

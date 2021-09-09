@@ -107,10 +107,13 @@
 
   @media (min-width: $desktop-width) {
     min-width: 478px;
-    max-width: 610px;
     margin-right: 1px;
 
     @include font ($main-header-size, ceil(1.5 * $main-header-size), 400);
+
+    &--index {
+      max-width: 610px;
+    }
   }
 }
 
