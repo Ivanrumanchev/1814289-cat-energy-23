@@ -114,55 +114,125 @@
   }
 
   &--health {
+    position: relative;
+
     @media (max-width: $mobile-width-only) {
       margin-bottom: 20px;
-      background: url("../img/bg_description__item--health.png") no-repeat;
-      background-size: 60px 60px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        background: $background url("../img/bg_description__item--health.png") no-repeat;
+        background-size: 60px 60px;
+
+        @include size (60px, 60px);
+      }
 
       @media (min-resolution: 144dpi),
         (min-resolution: 1.5dppx) {
-        background: url("../img/bg_description__item--health@2x.png") no-repeat;
-        background-size: 60px 60px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(0, -50%);
+          background: $background url("../img/bg_description__item--health@2x.png") no-repeat;
+          background-size: 60px 60px;
+
+          @include size (60px, 60px);
+        }
       }
     }
 
     @media (min-width: $tablet-width) {
-      background: url("../img/bg_description__item--health_tablet.png") no-repeat;
-      background-position-y: 40px;
-      background-size: 80px 80px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: 0;
+        background: $background url("../img/bg_description__item--health_tablet.png") no-repeat;
+        background-size: 80px 80px;
+
+        @include size (80px, 80px);
+      }
 
       @media (min-resolution: 144dpi),
         (min-resolution: 1.5dppx) {
-        background: url("../img/bg_description__item--health_tablet@2x.png") no-repeat;
-        background-position-y: 40px;
-        background-size: 80px 80px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 40px;
+          left: 0;
+          background: $background url("../img/bg_description__item--health_tablet@2x.png") no-repeat;
+          background-size: 80px 80px;
+
+          @include size (80px, 80px);
+        }
       }
     }
   }
 
   &--fast {
+    position: relative;
+
     @media (max-width: $mobile-width-only) {
       margin-bottom: 20px;
-      background: url("../img/bg_description__item--fast.png") no-repeat;
-      background-size: 60px 60px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        background: $background url("../img/bg_description__item--fast.png") no-repeat;
+        background-size: 60px 60px;
+
+        @include size (60px, 60px);
+      }
 
       @media (min-resolution: 144dpi),
         (min-resolution: 1.5dppx) {
-        background: url("../img/bg_description__item--fast@2x.png") no-repeat;
-        background-size: 60px 60px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(0, -50%);
+          background: $background url("../img/bg_description__item--fast@2x.png") no-repeat;
+          background-size: 60px 60px;
+
+          @include size (60px, 60px);
+        }
       }
     }
 
     @media (min-width: $tablet-width) {
-      background: url("../img/bg_description__item--fast_tablet.png") no-repeat;
-      background-position-y: 40px;
-      background-size: 80px 80px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: 0;
+        background: $background url("../img/bg_description__item--fast_tablet.png") no-repeat;
+        background-size: 80px 80px;
+
+        @include size (80px, 80px);
+      }
 
       @media (min-resolution: 144dpi),
         (min-resolution: 1.5dppx) {
-        background: url("../img/bg_description__item--fast_tablet@2x.png") no-repeat;
-        background-position-y: 40px;
-        background-size: 80px 80px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 40px;
+          left: 0;
+          background: $background url("../img/bg_description__item--fast_tablet@2x.png") no-repeat;
+          background-size: 80px 80px;
+
+          @include size (80px, 80px);
+        }
       }
 
       &::after {
@@ -178,28 +248,63 @@
   }
 
   &--change {
+    position: relative;
+
     @media (max-width: $mobile-width-only) {
       margin-bottom: 20px;
-      background: url("../img/bg_description__item--change.png") no-repeat;
-      background-size: 60px 60px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        background: $background url("../img/bg_description__item--change.png") no-repeat;
+        background-size: 60px 60px;
+
+        @include size (60px, 60px);
+      }
 
       @media (min-resolution: 144dpi),
         (min-resolution: 1.5dppx) {
-        background: url("../img/bg_description__item--change@2x.png") no-repeat;
-        background-size: 60px 60px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(0, -50%);
+          background: $background url("../img/bg_description__item--change@2x.png") no-repeat;
+          background-size: 60px 60px;
+
+          @include size (60px, 60px);
+        }
       }
     }
 
     @media (min-width: $tablet-width) {
-      background: url("../img/bg_description__item--change_tablet.png") no-repeat;
-      background-position-y: 40px;
-      background-size: 80px 80px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: 0;
+        background: $background url("../img/bg_description__item--change_tablet.png") no-repeat;
+        background-size: 80px 80px;
+
+        @include size (80px, 80px);
+      }
 
       @media (min-resolution: 144dpi),
         (min-resolution: 1.5dppx) {
-        background: url("../img/bg_description__item--change_tablet@2x.png") no-repeat;
-        background-position-y: 40px;
-        background-size: 80px 80px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 40px;
+          left: 0;
+          background: $background url("../img/bg_description__item--change_tablet@2x.png") no-repeat;
+          background-size: 80px 80px;
+
+          @include size (80px, 80px);
+        }
       }
 
       &::after {
@@ -217,27 +322,61 @@
   }
 
   &--result {
+    position: relative;
+
     @media (max-width: $mobile-width-only) {
-      background: url("../img/bg_description__item--result.png") no-repeat;
-      background-size: 60px 60px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        background: $background url("../img/bg_description__item--result.png") no-repeat;
+        background-size: 60px 60px;
+
+        @include size (60px, 60px);
+      }
 
       @media (min-resolution: 144dpi),
         (min-resolution: 1.5dppx) {
-        background: url("../img/bg_description__item--result@2x.png") no-repeat;
-        background-size: 60px 60px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(0, -50%);
+          background: $background url("../img/bg_description__item--result@2x.png") no-repeat;
+          background-size: 60px 60px;
+
+          @include size (60px, 60px);
+        }
       }
     }
 
     @media (min-width: $tablet-width) {
-      background: url("../img/bg_description__item--result_tablet.png") no-repeat;
-      background-position-y: 40px;
-      background-size: 80px 80px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: 0;
+        background: $background url("../img/bg_description__item--result_tablet.png") no-repeat;
+        background-size: 80px 80px;
+
+        @include size (80px, 80px);
+      }
 
       @media (min-resolution: 144dpi),
         (min-resolution: 1.5dppx) {
-        background: url("../img/bg_description__item--result_tablet@2x.png") no-repeat;
-        background-position-y: 40px;
-        background-size: 80px 80px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 40px;
+          left: 0;
+          background: $background url("../img/bg_description__item--result_tablet@2x.png") no-repeat;
+          background-size: 80px 80px;
+
+          @include size (80px, 80px);
+        }
       }
 
       &::after {
