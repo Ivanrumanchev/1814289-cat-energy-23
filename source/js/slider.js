@@ -43,10 +43,10 @@ var listenerAfterMobile = function (event) {
     sliderBefore.classList.remove('slider__item--current');
     sliderAfter.classList.add('slider__item--current');
 
-    toggleBefore.classList.remove('slider__toggle--before--checked');
-    toggleAfter.classList.add('slider__toggle--after--checked');
-    toggleBefore.classList.add('slider__toggle--check');
-    toggleAfter.classList.remove('slider__toggle--check');
+    toggleBefore.classList.remove('slider__toggle--checked');
+    toggleAfter.classList.add('slider__toggle--checked');
+    toggleBefore.classList.add('slider__toggle--field');
+    toggleAfter.classList.remove('slider__toggle--field');
   }
 }
 
@@ -57,10 +57,10 @@ var listenerBeforeMobile = function (event) {
     sliderAfter.classList.remove('slider__item--current');
     sliderBefore.classList.add('slider__item--current');
 
-    toggleAfter.classList.remove('slider__toggle--after--checked');
-    toggleBefore.classList.add('slider__toggle--before--checked');
-    toggleAfter.classList.add('slider__toggle--check');
-    toggleBefore.classList.remove('slider__toggle--check');
+    toggleAfter.classList.remove('slider__toggle--checked');
+    toggleBefore.classList.add('slider__toggle--checked');
+    toggleAfter.classList.add('slider__toggle--field');
+    toggleBefore.classList.remove('slider__toggle--field');
   }
 }
 
@@ -74,10 +74,10 @@ function handleTabletChangeSlider(e) {
       sliderBefore.classList.remove('slider__item--current');
       sliderAfter.classList.add('slider__item--current');
 
-      toggleBefore.classList.remove('slider__toggle--before--checked');
-      toggleAfter.classList.add('slider__toggle--after--checked');
-      toggleBefore.classList.add('slider__toggle--check');
-      toggleAfter.classList.remove('slider__toggle--check');
+      toggleBefore.classList.remove('slider__toggle--checked');
+      toggleAfter.classList.add('slider__toggle--checked');
+      toggleBefore.classList.add('slider__toggle--field');
+      toggleAfter.classList.remove('slider__toggle--field');
     };
 
     sliderRange();

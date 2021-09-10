@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Кошка, корм, домашнее животное, здоровое питание">
+    <meta name="description" content="Кэт энерджи - лучший корм для кошек. Ваша кошка скажет вам довольное мяу">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=9872cb91-1fce-48f6-9694-13ea58eb6e30" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=9872cb91-1fce-48f6-9694-13ea58eb6e30"></script>
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -71,7 +74,7 @@
             </div>
           </a>
           <a class="page-header__logo-text" href="index.html">
-            <svg width="101" height="18">
+            <svg width="101" height="18" role="img" aria-label="Кэт энерджи">
               <use xlink:href="img/sprite.svg#logo-text"></use>
             </svg>
           </a>
@@ -142,7 +145,7 @@
             <div class="form__layout">
               <div class="form__row form__row--contacts-person">
                 <label class="label label--mail" for="mail">E-MAIL:*
-                  <svg width="19" height="14">
+                  <svg width="19" height="14" role="img" aria-label="Email" focusable="false" aria-hidden="true">
                     <use xlink:href="img/sprite.svg#mail-icon"></use>
                   </svg>
                 </label>
@@ -150,7 +153,7 @@
               </div>
               <div class="form__row form__row--contacts-person">
                 <label class="label label--phone" for="phone">Телефон:*
-                  <svg width="20" height="20">
+                  <svg width="20" height="20" role="img" aria-label="Телефон" focusable="false" aria-hidden="true">
                     <use xlink:href="img/sprite.svg#phone-icon"></use>
                   </svg>
                 </label>
@@ -197,14 +200,14 @@
             <span class="location__sity">Санкт-Петербург</span>
           </p>
         </div>
-        <div class="location__map" id="map"></div>
+        <div class="location__map location__map--nojs" id="map"></div>
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo-text">
           <a href="index.html">
-            <svg width="128" height="24">
+            <svg width="128" height="24" role="img" aria-label="Кэт энерджи">
               <use xlink:href="img/sprite.svg#logo-text"></use>
             </svg>
           </a>
@@ -213,7 +216,7 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
-                <svg width="23" height="13">
+                <svg width="23" height="13" role="img" aria-label="Ссылка VK">
                   <use xlink:href="img/sprite.svg#vk"></use>
                 </svg>
                 VK
@@ -221,7 +224,7 @@
             </li>
             <li class="social__item">
               <a class="social__link social__link--inst" href="https://www.instagram.com/htmlacademy">
-                <svg width="16" height="16">
+                <svg width="16" height="16" role="img" aria-label="Ссылка Instagram">
                   <use xlink:href="img/sprite.svg#inst"></use>
                 </svg>
                 Instagram
@@ -229,7 +232,7 @@
             </li>
             <li class="social__item">
               <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">
-                <svg width="13" height="20">
+                <svg width="13" height="20" role="img" aria-label="Ссылка Facebook">
                   <use xlink:href="img/sprite.svg#fb"></use>
                 </svg>
                 FB
@@ -240,7 +243,7 @@
         <div class="page-footer__copyright copyright">
           <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg width="27" height="34">
+            <svg width="27" height="34" role="img" aria-label="Логотип HTML Academy">
               <use xlink:href="img/sprite.svg#htmlacademy"></use>
             </svg>
           </a>

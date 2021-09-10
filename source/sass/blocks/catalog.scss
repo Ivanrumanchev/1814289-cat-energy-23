@@ -107,8 +107,6 @@
   &:last-child {
     @media (min-width: $tablet-width) {
       border: 2px solid $background_special;
-      height: 426px;
-      box-sizing: border-box;
     }
 
     .catalog-item {
