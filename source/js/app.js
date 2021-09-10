@@ -1,69 +1,60 @@
-var navMain = document.querySelector('.main-nav');
-var navToggle = document.querySelector('.main-nav__toggle');
-var locationMap = document.querySelector('.location__map');
+const NAV_MAIN = document.querySelector('.main-nav');
+const NAV_TOGGLE = document.querySelector('.main-nav__toggle');
+const LOCATION_MAP = document.querySelector('.location__map');
+const MEDIA_QUERY_TABLET = window.matchMedia('(min-width: 768px)');
+const MEDIA_QUERY_DESKTOP = window.matchMedia('(min-width: 1440px)');
 
-locationMap.classList.remove('location__map--nojs');
-navMain.classList.remove('main-nav--nojs');
+const SCOPE_MOBILE = 14;
+const SCOPE_TABLET = 15.3;
+const WIDTH_ICON_MOBILE = 57;
+const HEIGHT_ICON_MOBILE = 53;
+const WIDTH_ICON_TABLET = 113;
+const HEIGHT_ICON_TABLET = 106;
+const ICON_IMAGE_OFFSET_X_MOBILE = -25;
+const ICON_IMAGE_OFFSET_Y_MOBILE = -45;
+const ICON_IMAGE_OFFSET_X_TABLET = -50;
+const ICON_IMAGE_OFFSET_Y_TABLET = -60;
 
-navToggle.addEventListener('click', function() {
-  if (navMain.classList.contains('main-nav--closed')) {
-    navMain.classList.remove('main-nav--closed');
-    navMain.classList.add('main-nav--opened');
-  } else {
-    navMain.classList.add('main-nav--closed');
-    navMain.classList.remove('main-nav--opened');
-  }
+let scope = SCOPE_MOBILE;
+let widthIcon = WIDTH_ICON_MOBILE;
+let heightIcon = HEIGHT_ICON_MOBILE;
+let iconImageOffsetX = ICON_IMAGE_OFFSET_X_MOBILE;
+let iconImageOffsetY = ICON_IMAGE_OFFSET_Y_MOBILE;
+
+LOCATION_MAP.classList.remove('location__map--nojs');
+NAV_MAIN.classList.remove('main-nav--nojs');
+
+NAV_TOGGLE.addEventListener('click', function() {
+  NAV_MAIN.classList.toggle('main-nav--closed');
+  NAV_MAIN.classList.toggle('main-nav--opened');
 });
-
-const mediaQuery = window.matchMedia('(min-width: 768px)');
-let scopeMobile = 14;
-let scopeTablet = 15.3;
-let widthIconMobile = 57;
-let heightIconMobile = 53;
-let widthIconTablet = 113;
-let heightIconTablet = 106;
-let iconImageOffsetXMobile = -25;
-let iconImageOffsetYMobile = -45;
-let iconImageOffsetXTablet = -50;
-let iconImageOffsetYTablet = -60;
-
-var scope = scopeMobile;
-var widthIcon = widthIconMobile;
-var heightIcon = heightIconMobile;
-var iconImageOffsetX = iconImageOffsetXMobile;
-var iconImageOffsetY = iconImageOffsetYMobile;
 
 function handleTabletChange(e) {
   if (e.matches) {
-    scope = scopeTablet;
-    widthIcon = widthIconTablet;
-    heightIcon = heightIconTablet;
-    iconImageOffsetX = iconImageOffsetXTablet;
-    iconImageOffsetY = iconImageOffsetYTablet;
+    scope = SCOPE_TABLET;
+    widthIcon = WIDTH_ICON_TABLET;
+    heightIcon = HEIGHT_ICON_TABLET;
+    iconImageOffsetX = ICON_IMAGE_OFFSET_X_TABLET;
+    iconImageOffsetY = ICON_IMAGE_OFFSET_Y_TABLET;
 
   } else {
-    scope = scopeMobile;
-    widthIcon = widthIconMobile;
-    heightIcon = heightIconMobile;
-    iconImageOffsetX = iconImageOffsetXMobile;
-    iconImageOffsetY = iconImageOffsetYMobile;
+    scope = SCOPE_MOBILE;
+    widthIcon = WIDTH_ICON_MOBILE;
+    heightIcon = HEIGHT_ICON_MOBILE;
+    iconImageOffsetX = ICON_IMAGE_OFFSET_X_MOBILE;
+    iconImageOffsetY = ICON_IMAGE_OFFSET_Y_MOBILE;
   }
 }
 
-handleTabletChange(mediaQuery)
+handleTabletChange(MEDIA_QUERY_TABLET)
 
 ymaps.ready(function () {
-  var myMap = new ymaps.Map('map', {
+  let myMap = new ymaps.Map('map', {
           center: [59.938635, 30.323118],
           zoom: scope
       }, {
           searchControlProvider: 'yandex#search'
       }),
-
-      // Создаём макет содержимого.
-      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-      ),
 
       myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
           hintContent: 'Cat Energy',
