@@ -41,14 +41,14 @@
     }
 
     & svg {
-      padding-bottom: 2px;
+      padding-bottom: 1px;
       padding-right: 2px;
       fill: $icon_color;
 
       @include size (23px, 13px);
 
       @media (min-width: $tablet-width) {
-        @include size (29px, 17px);
+        @include size (30px, 18px);
       }
     }
 
