@@ -43,7 +43,7 @@
 }
 
 .location__title {
-  width: 139px;
+  min-width: 139px;
   text-align: left;
 
   text-transform: uppercase;
@@ -51,8 +51,9 @@
   @include font ($secondary-main-size, ceil(1.25 * $secondary-main-size));
 
   @media (min-width: $tablet-width) {
-    width: 171px;
+    min-width: 171px;
     margin-top: 5px;
+    margin-right: 20px;
 
     @include font ($title-size-smaller);
   }
@@ -68,16 +69,16 @@
 
 .location__text {
   margin: 0;
-  width: 140px;
+  min-width: 140px;
   text-align: left;
-  padding-left: 3px;
+  padding-left: 2px;
 
   color: $special_1_color;
 
   @include font ($main-size, ceil(1.42 * $main-size), 400, $text_font);
 
   @media (min-width: $tablet-width) {
-    width: 159px;
+    min-width: 159px;
     margin-bottom: 7px;
     padding-right: 1px;
     text-align: right;
@@ -88,6 +89,10 @@
   @media (min-width: $desktop-width) {
     text-align: left;
   }
+
+  & span {
+    display: block;
+  }
 }
 
 .location__sity {
@@ -95,6 +100,10 @@
     margin-top: 20px;
     text-align: right;
     display: inline-block;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
   }
 }
 

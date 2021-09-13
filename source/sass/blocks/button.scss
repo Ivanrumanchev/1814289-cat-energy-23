@@ -2,14 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   box-sizing: border-box;
+  min-height: 40px;
+  padding: 7px 44px;
 
   color: $main_theme_color;
   text-transform: uppercase;
   text-decoration: none;
   background-color: $background;
 
-  @include size (280px, 40px);
   @include font ($secondary-main-size, ceil(1.25 * $secondary-main-size));
 
   &:hover {
@@ -25,6 +27,11 @@
 .button--disabled {
   background-color: $background_special;
   color: $special_1_color;
+  padding: 7px 35px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 3px;
+  }
 
   &:hover {
     background-color: $catalog-border-color;

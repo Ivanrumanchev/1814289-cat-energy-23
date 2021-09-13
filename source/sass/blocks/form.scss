@@ -360,6 +360,7 @@
   margin-bottom: 21px;
   border: none;
   width: 100%;
+  white-space: normal;
 
   @media (min-width: $tablet-width) {
     margin-left: 0;
@@ -367,8 +368,10 @@
     margin-bottom: 0;
     min-width: 282px;
     max-width: 568px;
+    padding: 13px 45px;
+    width: 44.9%;
+    min-height: 52px;
 
-    @include size (44.9%, 52px);
     @include font ($title-size-smaller);
   }
 
