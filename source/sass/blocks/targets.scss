@@ -85,8 +85,8 @@
 
     @media (min-width: $tablet-width) {
       left: auto;
-      top: auto;
-      bottom: 80px;
+      bottom: auto;
+      top: 81px;
       right: 62px;
 
       @include size (200px, 211px);
@@ -95,6 +95,7 @@
     @media (min-width: $desktop-width) {
       top: 41px;
       left: 52px;
+      right: auto;
 
       @include size (100px, 106px);
     }
@@ -108,8 +109,8 @@
 
     @media (min-width: $tablet-width) {
       left: auto;
-      top: auto;
-      bottom: 81px;
+      bottom: auto;
+      top: 91px;
       right: 28px;
 
       @include size (268px, 200px);
@@ -118,6 +119,7 @@
     @media (min-width: $desktop-width) {
       top: 47px;
       left: 33px;
+      right: auto;
 
       @include size (134px, 100px);
     }
@@ -136,12 +138,14 @@
   @media (min-width: $tablet-width) {
     margin-top: 25px;
     margin-left: 1px;
+    margin-right: 270px;
 
     @include font ($secondary-title-size);
   }
 
   @media (min-width: $desktop-width) {
     margin-left: 162px;
+    margin-right: 0;
   }
 }
 
@@ -173,9 +177,10 @@
 }
 
 .targets__to-catalog {
+  display: block;
   position: relative;
   margin-left: 1px;
-  margin-bottom: 4px;
+  margin-bottom: 0;
 
   text-transform: uppercase;
   text-decoration: none;
@@ -186,30 +191,29 @@
 
   @media (min-width: $tablet-width) {
     margin-left: 0;
-    margin-bottom: 5px;
+    margin-right: 270px;
 
     @include font ($title-size-smaller, ceil(1.5 * $title-size-smaller));
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 7px;
+    margin-right: 0;
   }
 
   & svg {
-    content: "";
-    position: absolute;
-    left: 102px;
-    top: 50%;
-    transform: translate(0, -50%);
+    margin-left: 12px;
+    display: inline;
+    vertical-align: 8%;
 
     @include size (24px, 12px);
 
     @media (min-width: $tablet-width) {
-      left: 133px;
+      vertical-align: 10%;
+      margin-left: 21px;
     }
 
     @media (min-width: $desktop-width) {
-      left: 136px;
+      margin-left: 24px;
     }
   }
 
@@ -226,14 +230,14 @@
   //pixel perfect
   &--pro {
     & svg {
-      left: 100px;
+      margin-left: 14px;
 
       @media (min-width: $tablet-width) {
-        left: 129px;
+        margin-left: 21px;
       }
 
       @media (min-width: $desktop-width) {
-        left: 130px;
+        margin-left: 22px;
       }
     }
   }

@@ -92,4 +92,8 @@
 .extra-item__button {
   grid-area: button;
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    align-self: center;
+  }
 }

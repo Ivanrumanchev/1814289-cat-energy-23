@@ -132,6 +132,7 @@
   @media (min-width: $desktop-width) {
     margin-left: 80px;
     margin-bottom: 52px;
+    width: 450px;
   }
 }
 
@@ -172,8 +173,10 @@
     margin-left: 90px;
     text-align: left;
     margin-bottom: 526px;
+    width: 244px;
+    min-height: 54px;
+    padding: 14px 26px;
 
-    @include size (244px, 54px);
     @include font ($title-size-smaller);
   }
 

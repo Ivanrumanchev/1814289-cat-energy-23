@@ -20,19 +20,28 @@
   }
 
   @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     min-height: 426px;
+    height: 100%;
     padding-top: 161px;
     padding-bottom: 39px;
     padding-left: 38px;
     padding-right: 37px;
 
     background-color: $background_special;
+
+    &--rice {
+      padding-left: 37px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 163px;
     padding-bottom: 40px;
-    padding-right: 38px;
+    padding-right: 37px;
     padding-left: 38px;
   }
 }
@@ -86,12 +95,20 @@
 
   @include font ($main-size-small, ceil(1.33 * $main-size-small), 400, $text_font);
 
+  &__column-1 {
+    min-width: 70px;
+  }
+
   &__column-2 {
     text-align: right;
+    min-width: 68px;
+
+    &.catalog-item__features-table__column-2--weight {
+      padding-right: 3px;
+    }
   }
 
   td {
-    min-width: 70px;
     width: 100%;
     padding: 0;
   }
@@ -118,15 +135,25 @@
   @media (min-width: $desktop-width) {
     margin-top: 17px;
     padding-left: 3px;
+
+    &__column-2 {
+      &.catalog-item__features-table__column-2--weight {
+        padding-right: 2px;
+      }
+    }
   }
 }
 
 .catalog-item__button {
   width: 100%;
-  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     margin-left: 1px;
+    width: 99.5%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 99%;
   }
 }
 
